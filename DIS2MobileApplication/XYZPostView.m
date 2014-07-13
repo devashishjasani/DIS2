@@ -47,6 +47,8 @@
         self.showTimings.text = @"9:30-11:30";
         self.imdbRatings.text = [NSString stringWithFormat:@"%.1f/10",post.show.imdbRatings];
         self.nowWatching.text = [NSString stringWithFormat:@"%d watching now", post.nowWatching];
+        self.status.text = post.statusUpdate;
+        
         
         
         //[self.swipeUP addTarget:self action:@selector(onSwipeUp:)];

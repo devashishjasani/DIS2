@@ -15,7 +15,7 @@
                 <outlet property="showName" destination="Use-GV-3Kl" id="EjB-aK-aBo"/>
                 <outlet property="showTimings" destination="hpU-5A-X4r" id="aVO-PB-DCq"/>
                 <outlet property="status" destination="cVd-PE-IcT" id="CWr-VS-KI5"/>
-                <outlet property="swipeUpGesture" destination="KYs-9b-VY1" id="SiW-6e-oTv"/>
+                <outlet property="swipeUpGesture" destination="KYs-9b-VY1" id="zVD-xP-aQN"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -72,8 +72,8 @@
                                     <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10 friends watching" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrN-AL-ita">
-                                    <rect key="frame" x="153" y="200" width="151" height="21"/>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10 friends watching" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrN-AL-ita">
+                                    <rect key="frame" x="118" y="200" width="151" height="21"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -140,6 +140,7 @@
                 <outlet property="showName" destination="Use-GV-3Kl" id="z18-74-jBO"/>
                 <outlet property="showTimings" destination="hpU-5A-X4r" id="0dx-3m-1gN"/>
                 <outlet property="status" destination="cVd-PE-IcT" id="wnC-Ms-IB3"/>
+                <outlet property="swipeUpGesture" destination="KYs-9b-VY1" id="sgC-D9-2Zm"/>
                 <outletCollection property="gestureRecognizers" destination="KYs-9b-VY1" appends="YES" id="ydE-3u-QPl"/>
             </connections>
         </view>

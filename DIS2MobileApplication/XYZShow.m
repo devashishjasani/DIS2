@@ -14,7 +14,7 @@
     
     self.channelID = 1;
     self.showID = 1;
-    self.showName = @"Game of Thrones";
+    self.showName = @"Game of Thrones blah";
     self.seasonNumber = 4;
     self.episodeNumber = 7;
     self.facebookLikes = 10555666;
