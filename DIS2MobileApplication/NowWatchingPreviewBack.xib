@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="sIL-N0-Its" customClass="XYZNowWatchingPreviewBack">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="312"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OBC-RJ-1gc">
+                    <rect key="frame" x="0.0" y="43" width="320" height="2"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </progressView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game of Thrones " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2t-1e-ZUS">
+                    <rect key="frame" x="20" y="7" width="280" height="28"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="23"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBC-ia-5Eh">
+                    <rect key="frame" x="20" y="43" width="280" height="254"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <string key="text">Game of Thrones roughly follows the three storylines of A Song of Ice and Fire.[5] Set in the fictional Seven Kingdoms of Westeros, the series chronicles the violent dynastic struggles among the realm's noble families for control of the Iron Throne. As the series opens, additional threats emerge in the icy North and in the eastern continent of Essos.[2]
+
+The novels and their adaptation derive settings, characters and plot elements from much of European history.[6] A principal inspiration for the novels were the English Wars of the Roses[7] (1455–85) between the houses of Lancaster and York, reflected in Martin's houses of Lannister and Stark. Most of Westeros, with its castles and knightly tournaments, is reminiscent of High Medieval Western Europe. The scheming Cersei, for instance, calls to mind Isabella (1295–1358), the "she-wolf of France".[6] She and her family, as depicted in Maurice Druon's historical novel series The Accursed Kings, particularly inspired Martin.[8] The series also combines such varied inspirations as Hadrian's Wall (which became Martin's great Wall), the fall of Rome and the legend of Atlantis (ancient Valyria), Byzantine "Greek fire" ("wildfire"), Icelandic sagas of the Viking Age (the Ironborn) and the Mongol hordes (the Dothraki), as well as elements from the Hundred Years' War (1337–1453) and the Italian Renaissance (c. 1400–1500).[6] The series' great popularity has in part been attributed to Martin's skill at fusing these disparate elements into a seamless whole that appears credible on its own terms as an alternative history.[6]
+
+"The Sopranos in Middle-earth" is the tagline showrunner David Benioff jokingly suggested for Game of Thrones, referring to its intrigue-filled plot and dark tone combined with a fantasy setting.[9] In a 2012 study, the series was listed second out of 40 recent U.S. TV drama series by deaths per episode, with an average of 14</string>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KeR-JB-blr">
+                    <rect key="frame" x="270" y="6" width="35" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Back">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.05936829222" green="0.31771785679999998" blue="0.35678411989999997" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="back" destination="KeR-JB-blr" id="MZh-jx-dfQ"/>
+                <outlet property="progressBar" destination="OBC-RJ-1gc" id="2Lj-ba-JpC"/>
+                <outlet property="readMoreLabel" destination="P2t-1e-ZUS" id="aLF-3o-x4W"/>
+                <outlet property="readMoreText" destination="GBC-ia-5Eh" id="han-se-TH3"/>
+            </connections>
+        </view>
+    </objects>
+</document>
