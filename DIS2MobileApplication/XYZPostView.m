@@ -49,7 +49,6 @@
         self.nowWatching.text = [NSString stringWithFormat:@"%d watching now", post.nowWatching];
         self.status.text = post.statusUpdate;
         
-        
         UISwipeGestureRecognizer *swipeGestureToBack = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipeUp:)];
         [swipeGestureToBack setDirection:UISwipeGestureRecognizerDirectionDown|UISwipeGestureRecognizerDirectionUp];
         UISwipeGestureRecognizer *swipeGestureToFront= [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipeUp:)];
