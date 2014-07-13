@@ -54,7 +54,7 @@
         [swipeGestureToFront setDirection:UISwipeGestureRecognizerDirectionUp|UISwipeGestureRecognizerDirectionDown];
         
         [self addGestureRecognizer:swipeGestureToBack];
-        [self addGestureRecognizer:swipeGestureToFront]
+        [self addGestureRecognizer:swipeGestureToFront];
     
     }
     

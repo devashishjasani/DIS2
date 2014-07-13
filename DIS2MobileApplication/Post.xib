@@ -15,7 +15,6 @@
                 <outlet property="showName" destination="Use-GV-3Kl" id="EjB-aK-aBo"/>
                 <outlet property="showTimings" destination="hpU-5A-X4r" id="aVO-PB-DCq"/>
                 <outlet property="status" destination="cVd-PE-IcT" id="CWr-VS-KI5"/>
-                <outlet property="swipeUpGesture" destination="KYs-9b-VY1" id="SiW-6e-oTv"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -38,9 +37,6 @@
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GameOfThrones.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kbj-3F-h1z">
                                     <rect key="frame" x="0.0" y="0.0" width="280" height="176"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
-                                    </userDefinedRuntimeAttributes>
                                 </imageView>
                                 <progressView opaque="NO" tag="7" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="e1H-6H-E0K">
                                     <rect key="frame" x="0.0" y="174" width="280" height="2"/>
@@ -134,14 +130,16 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <gestureRecognizers/>
             <connections>
-                <outletCollection property="gestureRecognizers" destination="KYs-9b-VY1" appends="YES" id="ydE-3u-QPl"/>
+                <outlet property="imdbRatings" destination="fQ7-FC-bOJ" id="Xwb-Ec-Yad"/>
+                <outlet property="nowWatching" destination="jrN-AL-ita" id="hf5-Iq-CSA"/>
+                <outlet property="profileName" destination="WXT-go-RCM" id="t4X-ah-bC8"/>
+                <outlet property="profilePicture" destination="jy2-wz-Ded" id="wpP-CL-Ce8"/>
+                <outlet property="showImage" destination="Kbj-3F-h1z" id="85l-bT-kTz"/>
+                <outlet property="showName" destination="Use-GV-3Kl" id="8CQ-82-nrR"/>
+                <outlet property="showTimings" destination="hpU-5A-X4r" id="gJK-ru-s1N"/>
+                <outlet property="status" destination="cVd-PE-IcT" id="0Qx-sL-fJq"/>
             </connections>
         </view>
-        <swipeGestureRecognizer direction="up" id="KYs-9b-VY1">
-            <connections>
-                <action selector="onSwipeUp:" destination="-1" id="7xe-fI-ZGj"/>
-            </connections>
-        </swipeGestureRecognizer>
     </objects>
     <resources>
         <image name="Devashish.png" width="189" height="193"/>
