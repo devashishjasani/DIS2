@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -144,11 +144,6 @@
                 <outletCollection property="gestureRecognizers" destination="KYs-9b-VY1" appends="YES" id="ydE-3u-QPl"/>
             </connections>
         </view>
-        <swipeGestureRecognizer direction="up" id="KYs-9b-VY1">
-            <connections>
-                <action selector="onSwipeUp:" destination="-1" id="7xe-fI-ZGj"/>
-            </connections>
-        </swipeGestureRecognizer>
     </objects>
     <resources>
         <image name="Devashish.png" width="189" height="193"/>
