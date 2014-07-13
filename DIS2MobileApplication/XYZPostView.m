@@ -26,8 +26,12 @@
 
 
 - (IBAction)onSwipeUp:(id)sender {
-    NSLog(@"DOWN");
+    NSLog(@"UP");
 
+}
+- (IBAction)onSwipeDown:(id)sender {
+    NSLog(@"DOWN");
+    
 }
 
 - (id)initWithPost:(XYZPost *)post
@@ -48,13 +52,13 @@
         self.imdbRatings.text = [NSString stringWithFormat:@"%.1f/10",post.show.imdbRatings];
         self.nowWatching.text = [NSString stringWithFormat:@"%d watching now", post.nowWatching];
         
-        UISwipeGestureRecognizer *swipeGestureToBack = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipeUp:)];
-        [swipeGestureToBack setDirection:UISwipeGestureRecognizerDirectionDown|UISwipeGestureRecognizerDirectionUp];
-        UISwipeGestureRecognizer *swipeGestureToFront= [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipeUp:)];
-        [swipeGestureToFront setDirection:UISwipeGestureRecognizerDirectionUp|UISwipeGestureRecognizerDirectionDown];
+        UISwipeGestureRecognizer *swipeGestureUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipeUp:)];
+        [swipeGestureUp setDirection:UISwipeGestureRecognizerDirectionUp];
+        UISwipeGestureRecognizer *swipeGestureDown= [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipeDown:)];
+        [swipeGestureDown setDirection:UISwipeGestureRecognizerDirectionDown];
         
-        [self addGestureRecognizer:swipeGestureToBack];
-        [self addGestureRecognizer:swipeGestureToFront];
+        [self addGestureRecognizer:swipeGestureUp];
+        [self addGestureRecognizer:swipeGestureDown];
     
     }
     
