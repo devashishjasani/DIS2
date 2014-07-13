@@ -19,7 +19,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *showTimings;
 @property (strong, nonatomic) IBOutlet UILabel *imdbRatings;
 @property (strong, nonatomic) IBOutlet UILabel *nowWatching;
-
+@property UILabel *hi;
 @property (weak, nonatomic) IBOutlet UIView *flickableView;
 
 @property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *swipeUpGesture;
