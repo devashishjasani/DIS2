@@ -37,7 +37,7 @@
         
         self = [[NSBundle mainBundle] loadNibNamed:@"Post" owner:self options:nil][0];
         
-        
+        self.status.text = post.statusUpdate;
         self.profileName.text = post.profile.profileName;
         self.profilePicture.image = [UIImage imageNamed:post.profile.imageURL];
         self.showImage.image = [UIImage imageNamed:post.show.imageURL];
@@ -48,10 +48,14 @@
         self.imdbRatings.text = [NSString stringWithFormat:@"%.1f/10",post.show.imdbRatings];
         self.nowWatching.text = [NSString stringWithFormat:@"%d watching now", post.nowWatching];
         
+        UISwipeGestureRecognizer *swipeGestureToBack = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipeUp:)];
+        [swipeGestureToBack setDirection:UISwipeGestureRecognizerDirectionDown|UISwipeGestureRecognizerDirectionUp];
+        UISwipeGestureRecognizer *swipeGestureToFront= [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipeUp:)];
+        [swipeGestureToFront setDirection:UISwipeGestureRecognizerDirectionUp|UISwipeGestureRecognizerDirectionDown];
         
-        //[self.swipeUP addTarget:self action:@selector(onSwipeUp:)];
-        //[self.swipeDown addTarget:self action:@selector(onSwipeDown:)];
-        
+        [self addGestureRecognizer:swipeGestureToBack];
+        [self addGestureRecognizer:swipeGestureToFront]
+    
     }
     
 

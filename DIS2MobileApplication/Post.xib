@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -38,6 +38,9 @@
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GameOfThrones.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kbj-3F-h1z">
                                     <rect key="frame" x="0.0" y="0.0" width="280" height="176"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
                                 </imageView>
                                 <progressView opaque="NO" tag="7" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="e1H-6H-E0K">
                                     <rect key="frame" x="0.0" y="174" width="280" height="2"/>
@@ -131,15 +134,6 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <gestureRecognizers/>
             <connections>
-                <outlet property="flickableView" destination="JJi-Ve-vrv" id="uas-sR-9H7"/>
-                <outlet property="imdbRatings" destination="fQ7-FC-bOJ" id="Ks5-GC-mFw"/>
-                <outlet property="nowWatching" destination="jrN-AL-ita" id="j7K-e9-dKW"/>
-                <outlet property="profileName" destination="WXT-go-RCM" id="gOa-aL-RBo"/>
-                <outlet property="profilePicture" destination="jy2-wz-Ded" id="mwv-cf-0oU"/>
-                <outlet property="showImage" destination="Kbj-3F-h1z" id="vUP-np-Khn"/>
-                <outlet property="showName" destination="Use-GV-3Kl" id="z18-74-jBO"/>
-                <outlet property="showTimings" destination="hpU-5A-X4r" id="0dx-3m-1gN"/>
-                <outlet property="status" destination="cVd-PE-IcT" id="wnC-Ms-IB3"/>
                 <outletCollection property="gestureRecognizers" destination="KYs-9b-VY1" appends="YES" id="ydE-3u-QPl"/>
             </connections>
         </view>
