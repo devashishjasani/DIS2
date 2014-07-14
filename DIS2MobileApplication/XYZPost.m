@@ -7,17 +7,33 @@
 //
 
 #import "XYZPost.h"
+#import "XYZAppDelegate.h"
 
 @implementation XYZPost
 
-- (id) init {
-    
+//- (id) init {
+//    
+//    
+//
+//    
+//    
+//    
+//    self.postID = 1;
+//    self.profile = [[XYZProfile alloc] init];
+//    self.show = [[XYZShow alloc] init];
+//    self.statusUpdate = @"What an awesome show !!!";
+//    self.nowWatching = 10;
+//    
+//    return self;
+//}
+
+- (id) initWithShow: (XYZShow *)show
+{
     self.postID = 1;
     self.profile = [[XYZProfile alloc] init];
-    self.show = [[XYZShow alloc] init];
+    self.show = show;
     self.statusUpdate = @"What an awesome show !!!";
     self.nowWatching = 10;
-    
     return self;
 }
 

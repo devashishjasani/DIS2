@@ -9,6 +9,8 @@
 #import "XYZFriendsNowWatchingViewController.h"
 #import "XYZPost.h"
 #import "XYZPostView.h"
+#import "XYZAppDelegate.h"
+#import "XYZShow.h"
 
 @interface XYZFriendsNowWatchingViewController ()
 
@@ -46,7 +48,7 @@
 {
     [self.horizontalScroll.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     
-    for (int i=0; i<10; i++) {
+    for (int i=0; i<7; i++) {
         
         XYZPostView *tempPost = [[XYZPostView  alloc] initWithPost:[self.postList objectAtIndex:i]];
         tempPost.frame = CGRectMake(self.horizontalScroll.frame.size.width*i, 5, tempPost.frame.size.width, tempPost.frame.size.height);
@@ -93,11 +95,15 @@
 
 - (void) loadAllPosts
 {
+    
+    XYZAppDelegate *myDelegate = (XYZAppDelegate *)[[UIApplication sharedApplication] delegate];
+    
     self.postList = [[NSMutableArray alloc] init];
-    for (int i=0; i<10; i++)
+    for (int i=0; i<7; i++)
     {
         
-        XYZPost *temp = [[XYZPost alloc] init];
+        
+        XYZPost *temp = [[XYZPost alloc] initWithShow:(XYZShow *)myDelegate.allShows.shows[i]];
         [self.postList addObject:temp];
         
         

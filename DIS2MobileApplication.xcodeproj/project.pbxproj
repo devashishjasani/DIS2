@@ -29,6 +29,14 @@
 		5A6095C919727849000EBBEC /* XYZPostView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6095C819727849000EBBEC /* XYZPostView.m */; };
 		5A6095CF1972895A000EBBEC /* XYZPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6095CE1972895A000EBBEC /* XYZPost.m */; };
 		5A6095D219728C1C000EBBEC /* XYZProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6095D119728C1C000EBBEC /* XYZProfile.m */; };
+		5A6095DD1973E35F000EBBEC /* Frozen.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A6095D71973E35F000EBBEC /* Frozen.png */; };
+		5A6095DE1973E35F000EBBEC /* Edge.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A6095D81973E35F000EBBEC /* Edge.png */; };
+		5A6095DF1973E35F000EBBEC /* Hobbit.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A6095D91973E35F000EBBEC /* Hobbit.png */; };
+		5A6095E01973E35F000EBBEC /* Xmen.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A6095DA1973E35F000EBBEC /* Xmen.png */; };
+		5A6095E11973E35F000EBBEC /* Matrix.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A6095DB1973E35F000EBBEC /* Matrix.png */; };
+		5A6095E81973E3C1000EBBEC /* XYZAllShows.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6095E71973E3C1000EBBEC /* XYZAllShows.m */; };
+		5A6095EB1973F1BF000EBBEC /* XYZAllPosts.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6095EA1973F1BF000EBBEC /* XYZAllPosts.m */; };
+		5A6095ED1973F7EB000EBBEC /* Strangelove.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A6095EC1973F7EB000EBBEC /* Strangelove.png */; };
 		5ABFC59519684D3D00EE3612 /* XYZNowWatchingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABFC59419684D3D00EE3612 /* XYZNowWatchingViewController.m */; };
 		5ABFC59B1968537D00EE3612 /* XYZNowWatchingPreviewFront.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABFC59A1968537D00EE3612 /* XYZNowWatchingPreviewFront.m */; };
 		5ABFC59E196853D300EE3612 /* XYZNowWatchingPreviewBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABFC59D196853D300EE3612 /* XYZNowWatchingPreviewBack.m */; };
@@ -82,6 +90,16 @@
 		5A6095CE1972895A000EBBEC /* XYZPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZPost.m; sourceTree = "<group>"; };
 		5A6095D019728C1C000EBBEC /* XYZProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZProfile.h; sourceTree = "<group>"; };
 		5A6095D119728C1C000EBBEC /* XYZProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZProfile.m; sourceTree = "<group>"; };
+		5A6095D71973E35F000EBBEC /* Frozen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Frozen.png; sourceTree = "<group>"; };
+		5A6095D81973E35F000EBBEC /* Edge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Edge.png; sourceTree = "<group>"; };
+		5A6095D91973E35F000EBBEC /* Hobbit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hobbit.png; sourceTree = "<group>"; };
+		5A6095DA1973E35F000EBBEC /* Xmen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Xmen.png; sourceTree = "<group>"; };
+		5A6095DB1973E35F000EBBEC /* Matrix.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Matrix.png; sourceTree = "<group>"; };
+		5A6095E61973E3C1000EBBEC /* XYZAllShows.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZAllShows.h; sourceTree = "<group>"; };
+		5A6095E71973E3C1000EBBEC /* XYZAllShows.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZAllShows.m; sourceTree = "<group>"; };
+		5A6095E91973F1BF000EBBEC /* XYZAllPosts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZAllPosts.h; sourceTree = "<group>"; };
+		5A6095EA1973F1BF000EBBEC /* XYZAllPosts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZAllPosts.m; sourceTree = "<group>"; };
+		5A6095EC1973F7EB000EBBEC /* Strangelove.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Strangelove.png; sourceTree = "<group>"; };
 		5ABFC59319684D3D00EE3612 /* XYZNowWatchingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZNowWatchingViewController.h; sourceTree = "<group>"; };
 		5ABFC59419684D3D00EE3612 /* XYZNowWatchingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZNowWatchingViewController.m; sourceTree = "<group>"; };
 		5ABFC5991968537D00EE3612 /* XYZNowWatchingPreviewFront.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZNowWatchingPreviewFront.h; sourceTree = "<group>"; };
@@ -211,6 +229,12 @@
 		5A47625F1967056E00E30E3F /* Shows */ = {
 			isa = PBXGroup;
 			children = (
+				5A6095EC1973F7EB000EBBEC /* Strangelove.png */,
+				5A6095D71973E35F000EBBEC /* Frozen.png */,
+				5A6095D81973E35F000EBBEC /* Edge.png */,
+				5A6095D91973E35F000EBBEC /* Hobbit.png */,
+				5A6095DA1973E35F000EBBEC /* Xmen.png */,
+				5A6095DB1973E35F000EBBEC /* Matrix.png */,
 				5A4762601967064700E30E3F /* GameOfThrones.png */,
 			);
 			name = Shows;
@@ -320,6 +344,10 @@
 				5A6095CE1972895A000EBBEC /* XYZPost.m */,
 				5A6095D019728C1C000EBBEC /* XYZProfile.h */,
 				5A6095D119728C1C000EBBEC /* XYZProfile.m */,
+				5A6095E61973E3C1000EBBEC /* XYZAllShows.h */,
+				5A6095E71973E3C1000EBBEC /* XYZAllShows.m */,
+				5A6095E91973F1BF000EBBEC /* XYZAllPosts.h */,
+				5A6095EA1973F1BF000EBBEC /* XYZAllPosts.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -409,14 +437,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A6095DE1973E35F000EBBEC /* Edge.png in Resources */,
 				5A6095C319722424000EBBEC /* Post.xib in Resources */,
 				5A476242196704FB00E30E3F /* Images.xcassets in Resources */,
 				5ABFC5A61968C34600EE3612 /* Like.png in Resources */,
+				5A6095ED1973F7EB000EBBEC /* Strangelove.png in Resources */,
 				5A476231196704FB00E30E3F /* InfoPlist.strings in Resources */,
 				5A4762611967064700E30E3F /* GameOfThrones.png in Resources */,
 				5AEA66BA196F55D80076D38F /* Play.png in Resources */,
 				5A47626519673EDF00E30E3F /* NowWatchingPreviewBack.xib in Resources */,
 				5A47626319673D8F00E30E3F /* NowWatchingPreviewFront.xib in Resources */,
+				5A6095E01973E35F000EBBEC /* Xmen.png in Resources */,
+				5A6095DF1973E35F000EBBEC /* Hobbit.png in Resources */,
+				5A6095E11973E35F000EBBEC /* Matrix.png in Resources */,
+				5A6095DD1973E35F000EBBEC /* Frozen.png in Resources */,
 				5AEA66B3196F3E700076D38F /* Suggest.png in Resources */,
 				5ABFC5A71968C34600EE3612 /* ReadMore.png in Resources */,
 				5A47623A196704FB00E30E3F /* Main.storyboard in Resources */,
@@ -445,10 +479,12 @@
 				5A6095C119722073000EBBEC /* XYZFriendsNowWatchingViewController.m in Sources */,
 				5A476237196704FB00E30E3F /* XYZAppDelegate.m in Sources */,
 				5A6095D219728C1C000EBBEC /* XYZProfile.m in Sources */,
+				5A6095E81973E3C1000EBBEC /* XYZAllShows.m in Sources */,
 				5ABFC59E196853D300EE3612 /* XYZNowWatchingPreviewBack.m in Sources */,
 				5A6095C919727849000EBBEC /* XYZPostView.m in Sources */,
 				5ABFC59519684D3D00EE3612 /* XYZNowWatchingViewController.m in Sources */,
 				5ABFC59B1968537D00EE3612 /* XYZNowWatchingPreviewFront.m in Sources */,
+				5A6095EB1973F1BF000EBBEC /* XYZAllPosts.m in Sources */,
 				5A6095CF1972895A000EBBEC /* XYZPost.m in Sources */,
 				5A476233196704FB00E30E3F /* main.m in Sources */,
 			);

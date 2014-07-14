@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DIS2MobileApplication/XYZFriendsNowWatchingViewController.m"
-            timestampString = "426970040.892509"
+            timestampString = "427030153.281842"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "-populateTheScrollView"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DIS2MobileApplication/XYZFriendsNowWatchingViewController.m"
-            timestampString = "426970040.892509"
+            timestampString = "427030153.281842"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "-populateTheScrollView"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DIS2MobileApplication/XYZFriendsNowWatchingViewController.m"
-            timestampString = "426957717.735679"
+            timestampString = "427030153.281842"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "-populateTheScrollView"
             landmarkType = "5">
          </BreakpointContent>

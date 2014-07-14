@@ -13,6 +13,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    self.allShows = [[XYZAllShows alloc] init];
+    
+    
+    
     return YES;
 }
 							

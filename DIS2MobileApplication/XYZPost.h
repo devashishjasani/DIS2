@@ -18,6 +18,7 @@
 @property NSString *statusUpdate;
 @property NSUInteger nowWatching;
 
+- (id) initWithShow: (XYZShow *)show;
 
 
 @end

@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XYZAllShows.h"
+#import "XYZAllPosts.h"
 
 @interface XYZAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property XYZAllShows *allShows;
+@property XYZAllPosts *allPosts;
 
 @end
