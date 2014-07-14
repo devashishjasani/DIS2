@@ -9,7 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "XYZPost.h"
 
-@interface XYZPostView : UIView 
+@protocol XYZPostViewDelegate <NSObject>
+
+- (void) changeTVChannel: (NSUInteger) showId;
+
+@end
+
+@interface XYZPostView : UIView
+
+@property NSUInteger showId;
 
 @property (strong, nonatomic) IBOutlet UIImageView *profilePicture;
 @property (strong, nonatomic) IBOutlet UILabel *profileName;
@@ -19,13 +27,13 @@
 @property (strong, nonatomic) IBOutlet UILabel *showTimings;
 @property (strong, nonatomic) IBOutlet UILabel *imdbRatings;
 @property (strong, nonatomic) IBOutlet UILabel *nowWatching;
+@property id<XYZPostViewDelegate> delegate;
 
-@property UILabel *hi;
+
 @property (weak, nonatomic) IBOutlet UIView *flickableView;
 
-@property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *swipeUpGesture;
 
-- (IBAction)onSwipeUp:(id)sender;
+
 
 - (id)initWithPost:(XYZPost *)post;
 

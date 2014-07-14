@@ -35,7 +35,8 @@
     
     
     self.previewFront=[[XYZNowWatchingPreviewFront alloc] initWithShow:self.show];
-
+    [self.previewHolder.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    
     [self.previewHolder addSubview:self.previewFront];
     //NSLog(self.previewFront.showName);
     

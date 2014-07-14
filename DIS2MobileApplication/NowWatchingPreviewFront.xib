@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -8,9 +8,11 @@
             <connections>
                 <outlet property="facebookLikes" destination="Zq4-5l-fgT" id="LbS-FC-oty"/>
                 <outlet property="imdbRatings" destination="18S-kv-NJF" id="EoJ-2I-LmF"/>
+                <outlet property="likeShowButton" destination="o85-K0-9Tq" id="XQ6-31-ger"/>
                 <outlet property="live" destination="w0I-Aj-e2M" id="moj-Ku-OY3"/>
                 <outlet property="previewImage" destination="OAX-Tg-6Z4" id="Pbm-Es-vdy"/>
                 <outlet property="progressBar" destination="3BZ-XF-UyA" id="ULH-eG-uek"/>
+                <outlet property="shareShowButton" destination="mig-Ky-Aje" id="DO9-kg-Df5"/>
                 <outlet property="showName" destination="IYy-m1-aaj" id="Lqw-6j-FVg"/>
             </connections>
         </placeholder>
@@ -65,9 +67,12 @@
                     <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </progressView>
                 <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o85-K0-9Tq">
-                    <rect key="frame" x="30" y="234" width="50" height="50"/>
+                    <rect key="frame" x="30" y="236" width="50" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" backgroundImage="Like.png"/>
+                    <connections>
+                        <action selector="like:" destination="-1" eventType="touchUpInside" id="6Io-71-HCF"/>
+                    </connections>
                 </button>
                 <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mig-Ky-Aje">
                     <rect key="frame" x="104" y="234" width="50" height="50"/>
@@ -75,6 +80,10 @@
                     <state key="normal" backgroundImage="Share.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="readMore:" destination="mKZ-vk-Frx" eventType="touchUpInside" id="NBV-Kd-fMM"/>
+                        <action selector="share:" destination="-1" eventType="touchUpInside" id="wca-2g-ibH"/>
+                    </connections>
                 </button>
                 <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Etu-gb-LgO">
                     <rect key="frame" x="176" y="234" width="50" height="50"/>
@@ -82,6 +91,10 @@
                     <state key="normal" backgroundImage="Suggest.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="share:" destination="mKZ-vk-Frx" eventType="touchUpInside" id="jcF-gZ-N2n"/>
+                        <action selector="suggest:" destination="-1" eventType="touchUpInside" id="Pun-ng-MSo"/>
+                    </connections>
                 </button>
                 <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GO7-EB-y5p">
                     <rect key="frame" x="249" y="234" width="50" height="50"/>
@@ -89,6 +102,10 @@
                     <state key="normal" backgroundImage="ReadMore.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="readMore:" destination="-1" eventType="touchUpInside" id="bZv-XU-7IF"/>
+                        <action selector="suggest:" destination="mKZ-vk-Frx" eventType="touchUpInside" id="TdF-AQ-hVR"/>
+                    </connections>
                 </button>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Like" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFW-Du-Wuu">
                     <rect key="frame" x="42" y="285" width="27" height="21"/>
@@ -123,9 +140,11 @@
             <connections>
                 <outlet property="facebookLikes" destination="Zq4-5l-fgT" id="KII-Ne-sPe"/>
                 <outlet property="imdbRatings" destination="18S-kv-NJF" id="KeA-UF-EIG"/>
+                <outlet property="likeShowButton" destination="o85-K0-9Tq" id="sGc-hm-zU6"/>
                 <outlet property="live" destination="w0I-Aj-e2M" id="j2K-z2-47O"/>
                 <outlet property="previewImage" destination="OAX-Tg-6Z4" id="HrA-UZ-HwE"/>
                 <outlet property="progressBar" destination="3BZ-XF-UyA" id="d6n-pr-tJY"/>
+                <outlet property="shareShowButton" destination="mig-Ky-Aje" id="N8x-Oa-Aju"/>
                 <outlet property="showName" destination="IYy-m1-aaj" id="d2i-xu-jCW"/>
             </connections>
         </view>

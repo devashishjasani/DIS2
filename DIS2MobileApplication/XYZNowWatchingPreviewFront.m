@@ -24,6 +24,9 @@
 //    return self;
 //}
 
+- (IBAction)readMore:(id)sender {
+}
+
 - (id) initWithShow: (XYZShow *)show
 {
    
@@ -31,7 +34,7 @@
     if(self)
     {
     
-        
+    self.show=show;
     self = [[NSBundle mainBundle] loadNibNamed:@"NowWatchingPreviewFront" owner:self options:nil][0];
 
     self.showName.text = show.showName;
@@ -74,4 +77,17 @@
 */
 
 
+- (IBAction)like:(id)sender {
+    
+    NSLog(@"Hello");
+    self.show.facebookLikes = self.show.facebookLikes +1;
+    self.facebookLikes.text = [NSString stringWithFormat:@"You and %@",self.facebookLikes.text];
+
+}
+
+- (IBAction)share:(id)sender {
+}
+
+- (IBAction)suggest:(id)sender {
+}
 @end

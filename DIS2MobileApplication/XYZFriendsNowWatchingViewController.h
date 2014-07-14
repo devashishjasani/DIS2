@@ -7,12 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XYZPostView.h"
 
 
-@interface XYZFriendsNowWatchingViewController : UIViewController<UIScrollViewDelegate>
+@interface XYZFriendsNowWatchingViewController : UIViewController<UIScrollViewDelegate,XYZPostViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIScrollView *horizontalScroll;
 @property NSMutableArray *postList;
+
+
 
 
 

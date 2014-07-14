@@ -12,13 +12,22 @@
 @interface XYZNowWatchingPreviewFront : UIView
 
 
+
+@property XYZShow *show;
+
 @property (strong, nonatomic) IBOutlet UIImageView *previewImage;
 @property (strong, nonatomic) IBOutlet UILabel *showName;
 @property (strong, nonatomic) IBOutlet UILabel *facebookLikes;
 @property (strong, nonatomic) IBOutlet UILabel *imdbRatings;
 @property (strong, nonatomic) IBOutlet UILabel *live;
 @property (strong, nonatomic) IBOutlet UIProgressView *progressBar;
+@property (weak, nonatomic) IBOutlet UIButton *likeShowButton;
+@property (weak, nonatomic) IBOutlet UIButton *shareShowButton;
 
+- (IBAction)like:(id)sender;
+- (IBAction)share:(id)sender;
+- (IBAction)suggest:(id)sender;
+- (IBAction)readMore:(id)sender;
 
 
 - (id)initWithShow: (XYZShow *)show;

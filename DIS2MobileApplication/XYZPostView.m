@@ -27,12 +27,36 @@
 
 - (IBAction)onSwipeUp:(id)sender {
     NSLog(@"UP");
+    
+//        [UIView transitionFromView:self toView:nil duration:0.7f options:UIViewAnimationOptionTransitionCurlUp completion:nil];
+    
+    [UIView animateWithDuration:0.7f animations:^
+    {
+        self.frame = CGRectMake(self.frame.size.width*self.tag, -400, self.frame.size.width, self.frame.size.height);
+        
+    } completion:^(BOOL finished)
+    {
+        self.frame = CGRectMake(self.frame.size.width*self.tag, 0, self.frame.size.width, self.frame.size.height);
+        [self.delegate changeTVChannel:self.showId];
+        
+    }];
+    
+    
+    
+    
+    
+    
+    
 
 }
 - (IBAction)onSwipeDown:(id)sender {
     NSLog(@"DOWN");
+
+    
     
 }
+
+
 
 - (id)initWithPost:(XYZPost *)post
 {
@@ -52,6 +76,7 @@
         self.imdbRatings.text = [NSString stringWithFormat:@"%.1f/10",post.show.imdbRatings];
         self.nowWatching.text = [NSString stringWithFormat:@"%d watching now", post.nowWatching];
         self.status.text = post.statusUpdate;
+        self.showId=post.show.showID;
         
         UISwipeGestureRecognizer *swipeGestureUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipeUp:)];
         [swipeGestureUp setDirection:UISwipeGestureRecognizerDirectionUp];
