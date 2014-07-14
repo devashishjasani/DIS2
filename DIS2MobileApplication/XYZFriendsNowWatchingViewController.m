@@ -88,20 +88,6 @@
     
     // send the request
     XYZAppDelegate *myDelegate = (XYZAppDelegate *)[[UIApplication sharedApplication] delegate];
-//
-//    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:myDelegate.serverURL];
-//    
-//    [request setHTTPMethod:@"POST"];
-//    NSString *postString = [NSString stringWithFormat:@"setChannel:%d",showId];
-//    [request setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
-////    NSURLConnection *connection= [[NSURLConnection alloc] initWithRequest:request delegate:self];
-//    
-//    NSURLConnection *d = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES];
-    
-
-    
-    ///////
-    
     
     NSURL *requestUrl = myDelegate.serverURL;
     NSString *bodyString = [NSString stringWithFormat:@"setChannel:%d",showId];
@@ -109,7 +95,7 @@
     [userCodeRequest setHTTPMethod:@"POST"];
     [userCodeRequest setHTTPBody:[bodyString dataUsingEncoding:NSUTF8StringEncoding]];
     // launch the connection
-    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:userCodeRequest delegate:self startImmediately:YES];
+    [[NSURLConnection alloc] initWithRequest:userCodeRequest delegate:self startImmediately:YES];
 
     
     
