@@ -86,7 +86,17 @@
      //        self.tabBarController.selectedViewController = [self.tabBarController.viewControllers objectAtIndex:0];
     
     
+    // send the request
+    XYZAppDelegate *myDelegate = (XYZAppDelegate *)[[UIApplication sharedApplication] delegate];
 
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:myDelegate.serverURL];
+    
+    [request setHTTPMethod:@"POST"];
+    NSString *postString = [NSString stringWithFormat:@"setChanel:%d",showId];
+    [request setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
+//    NSURLConnection *connection= [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    
+    [[NSURLConnection alloc] initWithRequest:request delegate:self];
     
 
     

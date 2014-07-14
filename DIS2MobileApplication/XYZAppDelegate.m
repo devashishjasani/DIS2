@@ -13,7 +13,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
    // server URL hardcoded !
-    _serverURL = [NSURL URLWithString:@"137.226.56.153:50777"];
+    _serverURL = [NSURL URLWithString:@"137.226.56.153:51492"];
    
     // Override point for customization after application launch.
     
