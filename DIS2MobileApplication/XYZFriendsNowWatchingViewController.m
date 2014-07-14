@@ -88,6 +88,7 @@
     
     // send the request
     XYZAppDelegate *myDelegate = (XYZAppDelegate *)[[UIApplication sharedApplication] delegate];
+    myDelegate.channelNowPlaying = showId;
     
     NSURL *requestUrl = myDelegate.serverURL;
     NSString *bodyString = [NSString stringWithFormat:@"setChannel:%d",showId];

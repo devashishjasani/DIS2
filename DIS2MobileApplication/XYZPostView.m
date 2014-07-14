@@ -39,6 +39,7 @@
         self.frame = CGRectMake(self.frame.size.width*self.tag, 0, self.frame.size.width, self.frame.size.height);
         [self.delegate changeTVChannel:self.showId];
         
+        
     }];
     
     
