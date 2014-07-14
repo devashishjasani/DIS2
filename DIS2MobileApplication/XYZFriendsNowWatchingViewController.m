@@ -88,20 +88,68 @@
     
     // send the request
     XYZAppDelegate *myDelegate = (XYZAppDelegate *)[[UIApplication sharedApplication] delegate];
+//
+//    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:myDelegate.serverURL];
+//    
+//    [request setHTTPMethod:@"POST"];
+//    NSString *postString = [NSString stringWithFormat:@"setChannel:%d",showId];
+//    [request setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
+////    NSURLConnection *connection= [[NSURLConnection alloc] initWithRequest:request delegate:self];
+//    
+//    NSURLConnection *d = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES];
+    
 
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:myDelegate.serverURL];
     
-    [request setHTTPMethod:@"POST"];
-    NSString *postString = [NSString stringWithFormat:@"setChanel:%d",showId];
-    [request setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
-//    NSURLConnection *connection= [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    ///////
     
-    [[NSURLConnection alloc] initWithRequest:request delegate:self];
     
+    NSURL *requestUrl = myDelegate.serverURL;
+    NSString *bodyString = [NSString stringWithFormat:@"setChannel:%d",showId];
+    NSMutableURLRequest *userCodeRequest = [NSMutableURLRequest requestWithURL:requestUrl];
+    [userCodeRequest setHTTPMethod:@"POST"];
+    [userCodeRequest setHTTPBody:[bodyString dataUsingEncoding:NSUTF8StringEncoding]];
+    // launch the connection
+    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:userCodeRequest delegate:self startImmediately:YES];
 
+    
+    
+    
+    //    NSError *error;
+//    NSURLResponse *response;
+//
+//    NSData *responseData = [NSURLConnection sendSynchronousRequest:userCodeRequest returningResponse:&response error:&error];
+//    NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+//    // check for an error. If there is a network error, you should handle it here.
+//    if(!error)
+//    {
+//        //log response
+//        NSLog(@"Response from server = %@", responseString);
+//    }
+//    
     
     
 }
+
+// Copied and lightly modified from the given Example.
+-(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
+{
+    
+    NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*)response;
+    NSInteger statusCode = [httpResponse statusCode];
+    NSLog(@"%d",  (int)statusCode);
+    //    NSLog(@"%@", [NSString stringWithFormat:@"%@",  httpResponse]);
+    if (statusCode >= 300) {
+        NSLog(@"ERROR connecting");
+//        NSLog(statusCode);
+        // call method on delegate
+//        [_delegate didReceiveError:statusCode];
+        
+//        parseData = NO;
+    } else {
+//        parseData = YES;
+    }
+}
+
 
 - (void) loadAllPosts
 {
