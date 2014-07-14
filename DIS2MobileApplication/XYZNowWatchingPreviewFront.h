@@ -27,7 +27,9 @@
 - (IBAction)like:(id)sender;
 - (IBAction)share:(id)sender;
 - (IBAction)suggest:(id)sender;
-- (IBAction)readMore:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *more;
+
+- (IBAction)more:(UIButton *)sender;
 
 
 - (id)initWithShow: (XYZShow *)show;

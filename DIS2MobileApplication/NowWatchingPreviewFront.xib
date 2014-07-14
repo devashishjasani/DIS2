@@ -10,6 +10,7 @@
                 <outlet property="imdbRatings" destination="18S-kv-NJF" id="EoJ-2I-LmF"/>
                 <outlet property="likeShowButton" destination="o85-K0-9Tq" id="XQ6-31-ger"/>
                 <outlet property="live" destination="w0I-Aj-e2M" id="moj-Ku-OY3"/>
+                <outlet property="more" destination="GO7-EB-y5p" id="Cjj-ZT-dLj"/>
                 <outlet property="previewImage" destination="OAX-Tg-6Z4" id="Pbm-Es-vdy"/>
                 <outlet property="progressBar" destination="3BZ-XF-UyA" id="ULH-eG-uek"/>
                 <outlet property="shareShowButton" destination="mig-Ky-Aje" id="DO9-kg-Df5"/>
@@ -71,7 +72,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" backgroundImage="Like.png"/>
                     <connections>
-                        <action selector="like:" destination="-1" eventType="touchUpInside" id="6Io-71-HCF"/>
+                        <action selector="like:" destination="mKZ-vk-Frx" eventType="touchUpInside" id="CvA-b0-rVo"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mig-Ky-Aje">
@@ -81,8 +82,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="readMore:" destination="mKZ-vk-Frx" eventType="touchUpInside" id="NBV-Kd-fMM"/>
-                        <action selector="share:" destination="-1" eventType="touchUpInside" id="wca-2g-ibH"/>
+                        <action selector="share:" destination="mKZ-vk-Frx" eventType="touchUpInside" id="c8D-ap-CHW"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Etu-gb-LgO">
@@ -92,19 +92,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="share:" destination="mKZ-vk-Frx" eventType="touchUpInside" id="jcF-gZ-N2n"/>
-                        <action selector="suggest:" destination="-1" eventType="touchUpInside" id="Pun-ng-MSo"/>
-                    </connections>
-                </button>
-                <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GO7-EB-y5p">
-                    <rect key="frame" x="249" y="234" width="50" height="50"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" backgroundImage="ReadMore.png">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="readMore:" destination="-1" eventType="touchUpInside" id="bZv-XU-7IF"/>
-                        <action selector="suggest:" destination="mKZ-vk-Frx" eventType="touchUpInside" id="TdF-AQ-hVR"/>
+                        <action selector="suggest:" destination="mKZ-vk-Frx" eventType="touchUpInside" id="WSR-P7-Z6L"/>
                     </connections>
                 </button>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Like" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFW-Du-Wuu">
@@ -135,6 +123,16 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GO7-EB-y5p">
+                    <rect key="frame" x="248" y="236" width="50" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="BUTTON" image="ReadMore.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="more:" destination="mKZ-vk-Frx" eventType="touchUpInside" id="YEf-bj-wPn"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.05936829222" green="0.31771785679999998" blue="0.35678411989999997" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
