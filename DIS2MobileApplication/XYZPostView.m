@@ -72,7 +72,20 @@
         self.showName.text = post.show.showName;
         
         //get timings from post.show and set it here later
-        self.showTimings.text = @"9:30-11:30";
+        if(post.show.isLive)
+        {
+            self.showTimings.text = @"9:30-11:30";
+            self.progressBar.progress = post.show.progress;
+            
+        }
+        else
+        {
+            self.showTimings.text = @"On Demand";
+            [self.live setHidden:YES];
+            [self.progressBar setHidden:YES];
+        }
+
+        
         self.imdbRatings.text = [NSString stringWithFormat:@"%.1f/10",post.show.imdbRatings];
         self.nowWatching.text = [NSString stringWithFormat:@"%d watching now", post.nowWatching];
         self.status.text = post.statusUpdate;
