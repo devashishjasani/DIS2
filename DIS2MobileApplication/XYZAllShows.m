@@ -48,7 +48,7 @@
     show3.facebookLikes = 955666;
     show3.imdbRatings = 8.0f;
     show3.isLive = NO;
-    show3.imageURL = @"Strangelove.png";
+    show3.imageURL = @"StrangeLove.png";
     show3.progress = 0.6f;
     
     [self.shows addObject:show3];
