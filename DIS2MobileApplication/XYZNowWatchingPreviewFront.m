@@ -24,8 +24,8 @@
 //    return self;
 //}
 
-- (IBAction)readMore:(id)sender {
-}
+
+
 
 - (id) initWithShow: (XYZShow *)show
 {
@@ -76,6 +76,9 @@
 }
 */
 
+- (IBAction)more:(UIButton *)sender {
+    NSLog(@"Moar");
+}
 
 - (IBAction)like:(id)sender {
     
@@ -86,8 +89,10 @@
 }
 
 - (IBAction)share:(id)sender {
+    NSLog(@"Sher");
 }
 
 - (IBAction)suggest:(id)sender {
+    NSLog(@"Saggest");
 }
 @end
