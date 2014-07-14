@@ -16,5 +16,6 @@
 
 @property XYZAllShows *allShows;
 @property XYZAllPosts *allPosts;
+@property NSURL *serverURL;
 
 @end
