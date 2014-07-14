@@ -14,6 +14,7 @@
                 <outlet property="more" destination="GO7-EB-y5p" id="Cjj-ZT-dLj"/>
                 <outlet property="previewImage" destination="OAX-Tg-6Z4" id="Pbm-Es-vdy"/>
                 <outlet property="progressBar" destination="3BZ-XF-UyA" id="ULH-eG-uek"/>
+                <outlet property="seekBar" destination="xkP-5X-ueO" id="lX6-CH-QZE"/>
                 <outlet property="shareShowButton" destination="mig-Ky-Aje" id="DO9-kg-Df5"/>
                 <outlet property="showName" destination="IYy-m1-aaj" id="Lqw-6j-FVg"/>
             </connections>
@@ -68,6 +69,14 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </progressView>
+                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="xkP-5X-ueO">
+                    <rect key="frame" x="0.0" y="175" width="320" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="tintColor" red="0.80000000000000004" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="seekValueChanged:" destination="mKZ-vk-Frx" eventType="valueChanged" id="MbL-E0-wSd"/>
+                    </connections>
+                </slider>
                 <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o85-K0-9Tq">
                     <rect key="frame" x="30" y="236" width="50" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -96,8 +105,8 @@
                         <action selector="suggest:" destination="mKZ-vk-Frx" eventType="touchUpInside" id="WSR-P7-Z6L"/>
                     </connections>
                 </button>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Like" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFW-Du-Wuu">
-                    <rect key="frame" x="42" y="285" width="27" height="21"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Like" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFW-Du-Wuu">
+                    <rect key="frame" x="25" y="285" width="60" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -139,10 +148,12 @@
             <connections>
                 <outlet property="facebookLikes" destination="Zq4-5l-fgT" id="KII-Ne-sPe"/>
                 <outlet property="imdbRatings" destination="18S-kv-NJF" id="KeA-UF-EIG"/>
+                <outlet property="likeLabel" destination="LFW-Du-Wuu" id="JzY-ur-1q5"/>
                 <outlet property="likeShowButton" destination="o85-K0-9Tq" id="sGc-hm-zU6"/>
                 <outlet property="live" destination="w0I-Aj-e2M" id="j2K-z2-47O"/>
                 <outlet property="previewImage" destination="OAX-Tg-6Z4" id="HrA-UZ-HwE"/>
                 <outlet property="progressBar" destination="3BZ-XF-UyA" id="d6n-pr-tJY"/>
+                <outlet property="seekBar" destination="xkP-5X-ueO" id="7fY-wi-CGY"/>
                 <outlet property="shareShowButton" destination="mig-Ky-Aje" id="N8x-Oa-Aju"/>
                 <outlet property="showName" destination="IYy-m1-aaj" id="d2i-xu-jCW"/>
             </connections>

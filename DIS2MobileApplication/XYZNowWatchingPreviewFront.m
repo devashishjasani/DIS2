@@ -47,17 +47,35 @@
         
     self.imdbRatings.text = [NSString stringWithFormat:@"%.1f/10",show.imdbRatings];
 
+    self.progressBar.progress = show.progress;
+
+        
     if(show.isLive)
     {
         [self.live setHidden:NO];
+        [self.progressBar setHidden:YES];
+        
+        
+        
     }
     else
     {
         [self.live setHidden:YES];
-    }
-    self.progressBar.progress = show.progress;
+        [self.seekBar setHidden:YES];
         
-
+    }
+   
+    
+    if(show.isLiked)
+    {
+        self.likeLabel.text = @"Liked";
+        
+    }
+    else
+    {
+        self.likeLabel.text = @"Like";
+    }
+        
     
     }
 
@@ -78,6 +96,12 @@
 
 - (IBAction)more:(UIButton *)sender {
     NSLog(@"Moar");
+}
+
+- (IBAction)seekValueChanged:(id)sender {
+    
+    [self.delegate seekToTime:self.seekBar.value];
+    
 }
 
 - (IBAction)like:(id)sender {

@@ -25,6 +25,7 @@
 @property NSData *currentTime;
 @property NSDate *finishTime;
 @property float progress; //value should be between 0.0 and 1.0
+@property BOOL isLiked;
 
 
 @end

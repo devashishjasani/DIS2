@@ -17,5 +17,6 @@
 @property XYZAllShows *allShows;
 @property XYZAllPosts *allPosts;
 @property NSURL *serverURL;
+@property NSUInteger channelNowPlaying;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "XYZNowWatchingViewController.h"
+#import "XYZAppDelegate.h"
 
 @interface XYZNowWatchingViewController ()
 
@@ -31,19 +32,31 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view
     
-    self.show = [self getCurrentlyWatchingShow];
-    
-    
-    self.previewFront=[[XYZNowWatchingPreviewFront alloc] initWithShow:self.show];
-    [self.previewHolder.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-    
-    [self.previewHolder addSubview:self.previewFront];
+//    self.show = [self getCurrentlyWatchingShow];
+//    
+//    
+//    self.previewFront=[[XYZNowWatchingPreviewFront alloc] initWithShow:self.show];
+//    [self.previewHolder.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+//    
+//    [self.previewHolder addSubview:self.previewFront];
     //NSLog(self.previewFront.showName);
     
 
 
 }
 
+- (void) viewDidAppear:(BOOL)animate
+{
+    
+    XYZAppDelegate *myDelegate = (XYZAppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    self.show = myDelegate.allShows.shows[myDelegate.channelNowPlaying-1];
+    self.previewFront=[[XYZNowWatchingPreviewFront alloc] initWithShow:self.show];
+    [self.previewFront setDelegate:self];
+    [self.previewHolder addSubview:self.previewFront];
+    
+    
+}
 
 
 
@@ -61,6 +74,15 @@
     currentlyWatching = [[XYZShow alloc] init];
     return currentlyWatching;
     
+}
+
+
+- (void)seekToTime:(float)value
+{
+    NSUInteger seconds = lroundf(value*self.show.duration);
+    
+    
+    NSLog(@"%d",seconds);
 }
 
 

@@ -88,6 +88,8 @@
     
     // send the request
     XYZAppDelegate *myDelegate = (XYZAppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    myDelegate.channelNowPlaying = showId;
 
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:myDelegate.serverURL];
     
