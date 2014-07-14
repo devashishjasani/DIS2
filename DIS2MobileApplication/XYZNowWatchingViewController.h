@@ -11,7 +11,7 @@
 #import "XYZNowWatchingPreviewBack.h"
 #import "XYZShow.h"
 
-@interface XYZNowWatchingViewController : UIViewController
+@interface XYZNowWatchingViewController : UIViewController <XYZNowWatchingPreviewFrontDelegate>
 
 @property (strong, nonatomic) XYZNowWatchingPreviewFront *previewFront;
 @property (strong, nonatomic) XYZNowWatchingPreviewBack *previewBack;

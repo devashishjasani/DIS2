@@ -174,7 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				5AEA66AA196BFC890076D38F /* Model */,
-				5AEA66A3196BF9F20076D38F /* Suggestions */,
+				5AEA66A3196BF9F20076D38F /* Friends Watching */,
 				5ABFC59219684CD800EE3612 /* Now Watching */,
 				5A47625E1967056400E30E3F /* Images */,
 				5A476235196704FB00E30E3F /* XYZAppDelegate.h */,
@@ -307,13 +307,13 @@
 			name = "Now Watching Preview";
 			sourceTree = "<group>";
 		};
-		5AEA66A3196BF9F20076D38F /* Suggestions */ = {
+		5AEA66A3196BF9F20076D38F /* Friends Watching */ = {
 			isa = PBXGroup;
 			children = (
 				5AEA66A7196BFB710076D38F /* View Controller */,
 				5AEA66A8196BFC150076D38F /* XIB and Views */,
 			);
-			name = Suggestions;
+			name = "Friends Watching";
 			sourceTree = "<group>";
 		};
 		5AEA66A7196BFB710076D38F /* View Controller */ = {

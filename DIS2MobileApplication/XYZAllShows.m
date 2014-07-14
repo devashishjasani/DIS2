@@ -21,11 +21,13 @@
     show.channelID=1;
     show.showID=1;
     show.showName= @"Frozen";
-    show.facebookLikes = 10555666;
+    show.facebookLikes = 555666;
     show.imdbRatings = 9.2f;
     show.isLive = YES;
     show.imageURL = @"Frozen.png";
     show.progress = 0.6f;
+    show.isLiked = YES;
+    show.duration = 91;
     
     [self.shows addObject:show];
     
@@ -38,6 +40,8 @@
     show2.isLive = NO;
     show2.imageURL = @"Edge.png";
     show2.progress = 0.0f;
+    show2.isLiked = NO;
+    show2.duration = 85;
     
     [self.shows addObject:show2];
     
@@ -50,6 +54,8 @@
     show3.isLive = NO;
     show3.imageURL = @"StrangeLove.png";
     show3.progress = 0.6f;
+    show3.isLiked = NO;
+    show3.duration = 207;
     
     [self.shows addObject:show3];
     
@@ -62,6 +68,8 @@
     show4.isLive = NO;
     show4.imageURL = @"GameOfThrones.png";
     show4.progress = 0.6f;
+    show4.isLiked = NO;
+    show4.duration = 126;
     
     [self.shows addObject:show4];
     
@@ -74,6 +82,8 @@
     show5.isLive = NO;
     show5.imageURL = @"Matrix.png";
     show5.progress = 0.6f;
+    show5.isLiked = NO;
+    show5.duration = 163;
     
     [self.shows addObject:show5];
     
@@ -86,6 +96,8 @@
     show6.isLive = YES;
     show6.imageURL = @"Hobbit.png";
     show6.progress = 0.6f;
+    show6.isLiked = NO;
+    show6.duration = 239;
     
     [self.shows addObject:show6];
     
@@ -98,6 +110,8 @@
     show7.isLive = YES;
     show7.imageURL = @"Xmen.png";
     show7.progress = 0.6f;
+    show7.isLiked = NO;
+    show7.duration = 191;
     
     [self.shows addObject:show7];
     

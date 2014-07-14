@@ -18,6 +18,7 @@
     // Override point for customization after application launch.
     
     self.allShows = [[XYZAllShows alloc] init];
+    self.channelNowPlaying = 1;
     
     
     
