@@ -22,7 +22,14 @@
 @property (strong, nonatomic) IBOutlet UILabel *live;
 @property (strong, nonatomic) IBOutlet UIProgressView *progressBar;
 @property (weak, nonatomic) IBOutlet UIButton *likeShowButton;
+@property (weak, nonatomic) IBOutlet UILabel *likeLabel;
+
+
+
 @property (weak, nonatomic) IBOutlet UIButton *shareShowButton;
+
+
+
 
 - (IBAction)like:(id)sender;
 - (IBAction)share:(id)sender;

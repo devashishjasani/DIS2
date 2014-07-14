@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="facebookLikes" destination="Zq4-5l-fgT" id="LbS-FC-oty"/>
                 <outlet property="imdbRatings" destination="18S-kv-NJF" id="EoJ-2I-LmF"/>
+                <outlet property="likeLabel" destination="LFW-Du-Wuu" id="HYV-m1-gSh"/>
                 <outlet property="likeShowButton" destination="o85-K0-9Tq" id="XQ6-31-ger"/>
                 <outlet property="live" destination="w0I-Aj-e2M" id="moj-Ku-OY3"/>
                 <outlet property="more" destination="GO7-EB-y5p" id="Cjj-ZT-dLj"/>
@@ -42,7 +43,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10,000,340 like this" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zq4-5l-fgT">
-                    <rect key="frame" x="20" y="200" width="141" height="21"/>
+                    <rect key="frame" x="20" y="200" width="215" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

@@ -85,6 +85,8 @@
     NSLog(@"Hello");
     self.show.facebookLikes = self.show.facebookLikes +1;
     self.facebookLikes.text = [NSString stringWithFormat:@"You and %@",self.facebookLikes.text];
+    
+    
 
 }
 
