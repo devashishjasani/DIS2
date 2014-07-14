@@ -83,6 +83,19 @@
     
     
     NSLog(@"%d",seconds);
+    
+    XYZAppDelegate *myDelegate = (XYZAppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    NSURL *requestUrl = myDelegate.serverURL;
+    NSString *bodyString = [NSString stringWithFormat:@"goToTime:%d",seconds];
+    NSMutableURLRequest *userCodeRequest = [NSMutableURLRequest requestWithURL:requestUrl];
+    [userCodeRequest setHTTPMethod:@"POST"];
+    [userCodeRequest setHTTPBody:[bodyString dataUsingEncoding:NSUTF8StringEncoding]];
+    // launch the connection
+    [[NSURLConnection alloc] initWithRequest:userCodeRequest delegate:self startImmediately:YES];
+    
+    
+    
 }
 
 
