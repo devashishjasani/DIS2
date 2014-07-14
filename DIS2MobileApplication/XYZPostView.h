@@ -27,6 +27,10 @@
 @property (strong, nonatomic) IBOutlet UILabel *showTimings;
 @property (strong, nonatomic) IBOutlet UILabel *imdbRatings;
 @property (strong, nonatomic) IBOutlet UILabel *nowWatching;
+@property (weak, nonatomic) IBOutlet UILabel *live;
+@property (weak, nonatomic) IBOutlet UIProgressView *progressBar;
+
+
 @property id<XYZPostViewDelegate> delegate;
 
 

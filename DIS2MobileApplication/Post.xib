@@ -8,9 +8,11 @@
             <connections>
                 <outlet property="flickableView" destination="JJi-Ve-vrv" id="IMY-ZP-rMV"/>
                 <outlet property="imdbRatings" destination="fQ7-FC-bOJ" id="42G-wd-hOf"/>
+                <outlet property="live" destination="8ik-PP-DG4" id="4QA-Vf-Lfp"/>
                 <outlet property="nowWatching" destination="jrN-AL-ita" id="Ue2-vg-tPM"/>
                 <outlet property="profileName" destination="WXT-go-RCM" id="w4Q-Pz-cjA"/>
                 <outlet property="profilePicture" destination="jy2-wz-Ded" id="ZXm-Ee-471"/>
+                <outlet property="progressBar" destination="e1H-6H-E0K" id="Ae3-YL-j5t"/>
                 <outlet property="showImage" destination="Kbj-3F-h1z" id="GsJ-Ys-ZL0"/>
                 <outlet property="showName" destination="Use-GV-3Kl" id="EjB-aK-aBo"/>
                 <outlet property="showTimings" destination="hpU-5A-X4r" id="aVO-PB-DCq"/>
@@ -38,11 +40,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="280" height="176"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
-                                <progressView opaque="NO" tag="7" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="e1H-6H-E0K">
-                                    <rect key="frame" x="0.0" y="174" width="280" height="2"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </progressView>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9:30 - 11:30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpU-5A-X4r">
                                     <rect key="frame" x="6" y="178" width="102" height="21"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -51,11 +48,11 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view alpha="0.64999997615814209" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m1q-iY-GhB">
-                                    <rect key="frame" x="0.0" y="143" width="280" height="30"/>
+                                    <rect key="frame" x="0.0" y="143" width="280" height="33"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game of Thrones" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Use-GV-3Kl">
-                                            <rect key="frame" x="58" y="0.0" width="165" height="29"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -71,11 +68,24 @@
                                     <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <progressView opaque="NO" tag="7" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="e1H-6H-E0K">
+                                    <rect key="frame" x="0.0" y="174" width="280" height="2"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </progressView>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10 friends watching" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrN-AL-ita">
                                     <rect key="frame" x="118" y="200" width="151" height="21"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LIVE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ik-PP-DG4">
+                                    <rect key="frame" x="6" y="200" width="38" height="17"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
+                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
@@ -132,9 +142,11 @@
             <connections>
                 <outlet property="flickableView" destination="JJi-Ve-vrv" id="uas-sR-9H7"/>
                 <outlet property="imdbRatings" destination="fQ7-FC-bOJ" id="Ks5-GC-mFw"/>
+                <outlet property="live" destination="8ik-PP-DG4" id="4pO-7N-Ja5"/>
                 <outlet property="nowWatching" destination="jrN-AL-ita" id="j7K-e9-dKW"/>
                 <outlet property="profileName" destination="WXT-go-RCM" id="gOa-aL-RBo"/>
                 <outlet property="profilePicture" destination="jy2-wz-Ded" id="mwv-cf-0oU"/>
+                <outlet property="progressBar" destination="e1H-6H-E0K" id="3lc-rg-hiX"/>
                 <outlet property="showImage" destination="Kbj-3F-h1z" id="vUP-np-Khn"/>
                 <outlet property="showName" destination="Use-GV-3Kl" id="z18-74-jBO"/>
                 <outlet property="showTimings" destination="hpU-5A-X4r" id="0dx-3m-1gN"/>

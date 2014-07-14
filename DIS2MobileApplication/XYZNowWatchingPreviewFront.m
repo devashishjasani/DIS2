@@ -53,7 +53,8 @@
     if(show.isLive)
     {
         [self.live setHidden:NO];
-        [self.progressBar setHidden:YES];
+        [self.seekBar setHidden:YES];
+        
         
         
         
@@ -61,7 +62,8 @@
     else
     {
         [self.live setHidden:YES];
-        [self.seekBar setHidden:YES];
+        [self.progressBar setHidden:YES];
+        
         
     }
    

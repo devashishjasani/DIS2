@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DIS2MobileApplication/XYZNowWatchingPreviewFront.m"
-            timestampString = "427038822.313383"
+            timestampString = "427042576.742988"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "-initWithShow:"
             landmarkType = "5">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DIS2MobileApplication/XYZNowWatchingPreviewFront.m"
-            timestampString = "427040700.914903"
+            timestampString = "427042576.742988"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "-seekValueChanged:"
             landmarkType = "5">
          </BreakpointContent>
