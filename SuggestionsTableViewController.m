@@ -28,7 +28,7 @@
     [super viewDidLoad];
     
 
-    _suggestions = [NSArray arrayWithObjects:@"Drama",@"Sports",@"Reality",@"Action",nil];
+    _suggestions = [NSArray arrayWithObjects:@"Drama",@"Sport",@"Reality",@"Action",nil];
     
     
     
@@ -42,12 +42,6 @@
 
 
 
-
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 0;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {

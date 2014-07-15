@@ -41,7 +41,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Ln8-pP-1ks" kind="push" id="VoD-zU-pwi"/>
+                                    <segue destination="Ln8-pP-1ks" kind="push" id="aP0-Wp-gBs"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -62,7 +62,7 @@
         <!--Suggestions View Controller-->
         <scene sceneID="2Q2-9u-Vra">
             <objects>
-                <viewController id="Ln8-pP-1ks" customClass="SuggestionsViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Ln8-pP-1ks" customClass="SuggestionsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZpF-jH-XVh"/>
                         <viewControllerLayoutGuide type="bottom" id="dAF-pY-UV0"/>
@@ -71,8 +71,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OHU-hy-z3d">
-                                <rect key="frame" x="-6" y="0.0" width="326" height="480"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6p-ft-Arx">
+                                <rect key="frame" x="0.0" y="125" width="320" height="230"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </scrollView>
                         </subviews>
@@ -80,7 +80,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Hba-cq-3bS"/>
                     <connections>
-                        <outlet property="horizontalScrollView" destination="OHU-hy-z3d" id="tjP-Bp-x0i"/>
+                        <outlet property="horizontalScrollView" destination="a6p-ft-Arx" id="bEj-wp-0Aq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dxt-Jg-sDp" userLabel="First Responder" sceneMemberID="firstResponder"/>

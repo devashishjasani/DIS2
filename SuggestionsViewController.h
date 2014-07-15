@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XYZShowView.h"
 
-@interface SuggestionsViewController : UIViewController
+@interface SuggestionsViewController : UIViewController<UIScrollViewDelegate,XYZShowViewDelegate>
 @property NSString *category;
 @property (weak, nonatomic) IBOutlet UIScrollView *horizontalScrollView;
+@property NSArray *suggestionsToShow;
 
 @end
