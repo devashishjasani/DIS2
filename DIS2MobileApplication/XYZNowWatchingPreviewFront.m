@@ -7,6 +7,7 @@
 //
 
 #import "XYZNowWatchingPreviewFront.h"
+#import "XYZAppDelegate.h"
 #include "XYZShow.h"
 
 @implementation XYZNowWatchingPreviewFront
@@ -115,6 +116,41 @@
     
 
 }
+
+- (IBAction)play:(id)sender {
+    _pauseButton.hidden=NO;
+    _playButton.userInteractionEnabled=NO;
+    _playButton.enabled=NO;
+    _playButton.hidden=YES;
+    _pauseButton.userInteractionEnabled=YES;
+    _pauseButton.enabled=YES;    XYZAppDelegate *myDelegate = (XYZAppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSURL *requestUrl = myDelegate.serverURL;
+    NSString *bodyString = [NSString stringWithFormat:@"play"];
+    NSMutableURLRequest *userCodeRequest = [NSMutableURLRequest requestWithURL:requestUrl];
+    [userCodeRequest setHTTPMethod:@"POST"];
+    [userCodeRequest setHTTPBody:[bodyString dataUsingEncoding:NSUTF8StringEncoding]];
+    // launch the connection
+    [[NSURLConnection alloc] initWithRequest:userCodeRequest delegate:self startImmediately:YES];
+}
+
+- (IBAction)pause:(id)sender {
+    _playButton.hidden=NO;
+    _pauseButton.userInteractionEnabled=NO;
+    _pauseButton.enabled=NO;
+    _pauseButton.hidden=YES;
+    _playButton.userInteractionEnabled=YES;
+    _playButton.enabled=YES;
+    XYZAppDelegate *myDelegate = (XYZAppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSURL *requestUrl = myDelegate.serverURL;
+    NSString *bodyString = [NSString stringWithFormat:@"pause"];
+    NSMutableURLRequest *userCodeRequest = [NSMutableURLRequest requestWithURL:requestUrl];
+    [userCodeRequest setHTTPMethod:@"POST"];
+    [userCodeRequest setHTTPBody:[bodyString dataUsingEncoding:NSUTF8StringEncoding]];
+    // launch the connection
+    [[NSURLConnection alloc] initWithRequest:userCodeRequest delegate:self startImmediately:YES];
+}
+
+
 
 - (IBAction)share:(id)sender {
     NSLog(@"Sher");
