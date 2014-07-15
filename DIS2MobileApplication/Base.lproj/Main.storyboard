@@ -17,13 +17,33 @@
                     <connections>
                         <segue destination="EwJ-vd-ct2" kind="relationship" relationship="viewControllers" id="Ei8-g8-dk0"/>
                         <segue destination="E4c-Qf-SXq" kind="relationship" relationship="viewControllers" id="dDx-GO-uv1"/>
+                        <segue destination="55h-YT-Rvs" kind="relationship" relationship="viewControllers" id="oor-xo-6c2"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="58" y="56"/>
         </scene>
-        <!--Friends Now Watching View Controller - SUGGESTIONS-->
+        <!--View Controller - Suggestions-->
+        <scene sceneID="fq9-pw-Y8P">
+            <objects>
+                <viewController id="55h-YT-Rvs" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gZm-8j-7rs"/>
+                        <viewControllerLayoutGuide type="bottom" id="gNf-GT-PAX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8N8-wf-6Du">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Suggestions" id="ITg-L1-Xjq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fnm-EG-ehl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="573" y="975"/>
+        </scene>
+        <!--Friends Now Watching View Controller - Friends Feed-->
         <scene sceneID="WKX-TQ-Hcs">
             <objects>
                 <viewController id="E4c-Qf-SXq" customClass="XYZFriendsNowWatchingViewController" sceneMemberID="viewController">
@@ -42,7 +62,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="SUGGESTIONS" id="C4A-b7-PfE"/>
+                    <tabBarItem key="tabBarItem" title="Friends Feed" id="C4A-b7-PfE"/>
                     <connections>
                         <outlet property="horizontalScroll" destination="Wse-9A-NeX" id="D2O-Aw-Wgi"/>
                     </connections>
