@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="commentsPlaceholfer" destination="bgZ-Yu-t4s" id="fPK-Ym-rte"/>
                 <outlet property="commentsTableView" destination="hgw-SD-dNg" id="1bq-Mf-pp7"/>
+                <outlet property="doneButton" destination="xfm-4b-222" id="gcV-d8-OZR"/>
                 <outlet property="myComment" destination="827-P5-P9v" id="Ic5-Ew-U4U"/>
             </connections>
         </placeholder>
@@ -78,6 +79,7 @@
             </constraints>
             <connections>
                 <outlet property="commentsTableView" destination="hgw-SD-dNg" id="shc-HC-EOd"/>
+                <outlet property="doneButton" destination="xfm-4b-222" id="snn-dD-l3F"/>
                 <outlet property="myComment" destination="827-P5-P9v" id="gZw-hj-FRX"/>
             </connections>
         </view>

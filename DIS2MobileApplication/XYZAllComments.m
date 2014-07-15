@@ -56,15 +56,24 @@
 - (void)textViewDidBeginEditing:(UITextView *)textView{
     
     //[self.superview setHidden:YES];
-    self.commentsPlaceholfer.frame = CGRectMake(0, 0, self.commentsPlaceholfer.frame.size.width, self.commentsPlaceholfer.frame.size.height-200);
-    self.myComment.frame = CGRectMake(self.myComment.frame.origin.x, self.myComment.frame.origin.y - 200, self.myComment.frame.size.width, self.myComment.frame.size.height);
-    
+   // self.commentsPlaceholfer.frame = CGRectMake(0, 0, self.commentsPlaceholfer.frame.size.width, self.commentsPlaceholfer.frame.size.height-200);
+    self.myComment.frame = CGRectMake(self.myComment.frame.origin.x, self.myComment.frame.origin.y - 170, self.myComment.frame.size.width, self.myComment.frame.size.height);
+    self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, self.commentsTableView.frame.origin.y - 170, self.commentsTableView.frame.size.width, self.commentsTableView.frame.size.height);
+    self.doneButton.frame = CGRectMake(self.doneButton.frame.origin.x, self.doneButton.frame.origin.y - 170, self.doneButton.frame.size.width, self.doneButton.frame.size.height);
     
 }
 
 - (IBAction)doneCommenting:(id)sender {
     
-    [self.myComment resignFirstResponder];
+    
+    if([self.myComment resignFirstResponder] == YES)
+    {
+    self.myComment.frame = CGRectMake(self.myComment.frame.origin.x, self.myComment.frame.origin.y + 170, self.myComment.frame.size.width, self.myComment.frame.size.height);
+    self.commentsTableView.frame = CGRectMake(self.commentsTableView.frame.origin.x, self.commentsTableView.frame.origin.y + 170, self.commentsTableView.frame.size.width, self.commentsTableView.frame.size.height);
+    self.doneButton.frame = CGRectMake(self.doneButton.frame.origin.x, self.doneButton.frame.origin.y +170, self.doneButton.frame.size.width, self.doneButton.frame.size.height);
+    }
+
+    
     
 }
 @end
