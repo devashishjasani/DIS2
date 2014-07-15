@@ -18,15 +18,15 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="b1S-Sh-Wvf" customClass="XYZShowView">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="226"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="265"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Shadow.png" translatesAutoresizingMaskIntoConstraints="NO" id="kDw-we-ebm">
-                    <rect key="frame" x="0.0" y="-2" width="320" height="228"/>
-                    <autoresizingMask key="autoresizingMask"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Shadow.png" translatesAutoresizingMaskIntoConstraints="NO" id="4ct-jk-NUV">
+                    <rect key="frame" x="4" y="1" width="311" height="260"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gZN-hu-SkK">
-                    <rect key="frame" x="20" y="-2" width="280" height="228"/>
+                    <rect key="frame" x="20" y="17" width="280" height="228"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JJi-Ve-vrv">

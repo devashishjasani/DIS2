@@ -12,7 +12,8 @@
 #import "XYZAppDelegate.h"
 
 @interface SuggestionsViewController ()
-
+@property UIView *removingView;
+@property UIView *confirmRemoveView;
 @end
 
 @implementation SuggestionsViewController
@@ -233,38 +234,44 @@
     
 //    UIView *view= (UIView*)sender;
     
+    
+    
     // create the view
-    UIView *confirmRemoveView = [[UIView alloc] initWithFrame:CGRectMake(view.frame.origin.x+10,view.frame.origin.y+10, view.frame.size.width-20, view.frame.size.height-20)];
-    confirmRemoveView.backgroundColor = [UIColor lightGrayColor];
-    confirmRemoveView.layer.cornerRadius = 5;
-    confirmRemoveView.alpha = 0.;
+    _confirmRemoveView = [[UIView alloc] initWithFrame:CGRectMake(view.frame.origin.x+10,view.frame.origin.y+10, view.frame.size.width-20, view.frame.size.height-20)];
+    _confirmRemoveView.backgroundColor = [UIColor darkGrayColor];
+    _confirmRemoveView.layer.cornerRadius = 6;
+    _confirmRemoveView.alpha = 0.;
     //add label
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 10, confirmRemoveView.frame.size.width-40, 50)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 10, _confirmRemoveView.frame.size.width-40, 80)];
     label.text = @"Do you want to remove the show from your suggestions?";
     label.textAlignment = NSTextAlignmentCenter;
     label.numberOfLines = 0;
-    [confirmRemoveView addSubview:label];
+    label.font = [UIFont fontWithName:@"Verdana" size:20.];
+    label.textColor = [UIColor lightGrayColor];
+    [_confirmRemoveView addSubview:label];
     
     // add the buttons
     UIButton *undoButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    [undoButton setFrame:CGRectMake(20, 60, 50, 20)];
-    undoButton.titleLabel.text = @"Cancel";
-    undoButton.titleLabel.textAlignment = NSTextAlignmentCenter;
-    [confirmRemoveView addSubview:undoButton];
+    [undoButton setFrame:CGRectMake(20, _confirmRemoveView.frame.size.height-70, 100, 50)];
+    [undoButton setTitle:@"Cancel" forState:UIControlStateNormal];
+    [undoButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [undoButton addTarget:self action:@selector(undoUndo) forControlEvents:UIControlEventTouchUpInside];
+    [_confirmRemoveView addSubview:undoButton];
     
-//    UIButton * removeButton = [UIButton buttonWithType:UIButtonTypeSystem];
-//    [removeButton setFrame:CGRectMake(0, 60, 50, 20)];
-//    removeButton.titleLabel.text = @"Remove";
-//    removeButton.titleLabel.textAlignment = NSTextAlignmentCenter;
-//        [confirmRemoveView addSubview:removeButton];
-//    
-    [_horizontalScrollView addSubview:confirmRemoveView];
+    UIButton * removeButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [removeButton setFrame:CGRectMake(_confirmRemoveView.frame.size.width-120, _confirmRemoveView.frame.size.height-70, 100, 50)];
+    [removeButton setTitle:@"Remove" forState:UIControlStateNormal];
+    [removeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [removeButton addTarget:self action:@selector(remove) forControlEvents:UIControlEventTouchUpInside];
+    [_confirmRemoveView addSubview:removeButton];
+
+    [_horizontalScrollView addSubview:_confirmRemoveView];
     
     
     [UIView animateWithDuration:0.7f animations:^
      {
-         confirmRemoveView.alpha = 1.;
-         view.frame = CGRectMake(view.frame.size.width*view.tag, +500, view.frame.size.width, view.frame.size.height);
+         _confirmRemoveView.alpha = 1.;
+         view.frame = CGRectMake(view.frame.size.width *  [_horizontalScrollView.subviews indexOfObject:view], +500, view.frame.size.width, view.frame.size.height);
          
      } completion:^(BOOL finished)
      {
@@ -274,17 +281,97 @@
          
      }];
     
-    
+    _removingView = view;
 }
+
+
+-(void) undoUndo{
+    [UIView animateWithDuration:0.7f animations:^
+     {
+         _confirmRemoveView.alpha = 0.;
+         _removingView.frame = CGRectMake(_removingView.frame.origin.x, 0, _removingView.frame.size.width, _removingView.frame.size.height);
+         
+     } completion:^(BOOL finished)
+     {}];
+     
+}
+
+
+-(void) remove{
+//    NSMutableArray *subv=  [_horizontalScrollView.subviews  mutableCopy];
+//    NSArray *subv2=  _horizontalScrollView.subviews;
+//    [_horizontalScrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+//    [subv removeObject:_removingView];
+    XYZShowView *show;
+    NSInteger i=0;
+    BOOL needToMove = NO;
+    NSMutableArray *movingViews = [NSMutableArray array];
+    
+    
+    for (show in _horizontalScrollView.subviews) {
+       
+        if (needToMove) {
+            [movingViews addObject:show];
+        }
+        
+        if ([show isMemberOfClass:[XYZShowView class]]) {
+            i++;
+        }
+        
+        
+        if (show == _removingView){
+//        XYZShowView *tempPost = [[XYZShowView  alloc] initWithShow:show];
+//        tempPost.frame = CGRectMake(_horizontalScrollView.frame.size.width*i, 0, tempPost.frame.size.width, tempPost.frame.size.height);
+//        tempPost.tag=i++;
+//        [tempPost setDelegate:self];
+        
+//        [_horizontalScrollView addSubview:show];
+//            [show removeFromSuperview];
+            needToMove = YES;
+        }
+ 
+    }
+
+    
+    
+    [UIView animateWithDuration:0.7f animations:^
+     {
+         
+         
+         for (XYZShowView *s in movingViews) {
+             s.frame = CGRectMake(s.frame.origin.x-_horizontalScrollView.frame.size.width, s.frame.origin.y, s.frame.size.width, s.frame.size.height);
+         }
+         
+         
+         _confirmRemoveView.alpha = 0.;
+
+         [_removingView removeFromSuperview];
+         
+     } completion:^(BOOL finished)
+     {
+     [_confirmRemoveView removeFromSuperview];
+         
+         [_horizontalScrollView setContentSize: CGSizeMake(_horizontalScrollView.frame.size.width *(i-1), _horizontalScrollView.frame.size.height)];
+
+     }];
+
+
+}
+
+
+
+
+
+
+
+
+
 
 
 - (void) changeTVChannel:(NSUInteger)showId
 {
     
     UIView *to= [[self.tabBarController.viewControllers objectAtIndex:0] view];
-    
-    
-    
     
     [UIView transitionFromView:self.view toView:to duration:0.7 options:UIViewAnimationOptionTransitionCrossDissolve completion:^(BOOL finished) {
         
