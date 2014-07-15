@@ -34,11 +34,11 @@
 
 
     // prepare the data
-    NSMutableArray *suggestionsDrama = [NSMutableArray array];
+    NSMutableArray *suggestionsFantasy = [NSMutableArray array];
     NSMutableArray *suggestionsSports = [NSMutableArray array];
-    NSMutableArray *suggestionsCrime = [NSMutableArray array];
-    NSMutableArray *suggestionsAction = [NSMutableArray array];
-    NSMutableArray *suggestionsReality = [NSMutableArray array];
+    NSMutableArray *suggestionsAdventure = [NSMutableArray array];
+    NSMutableArray *suggestionsDrama = [NSMutableArray array];
+    NSMutableArray *suggestionsComedy = [NSMutableArray array];
     
 
     
@@ -54,7 +54,10 @@
     show.isLiked = YES;
     show.duration = 91;
     
-    [suggestionsAction addObject:show];
+    [suggestionsFantasy addObject:show];
+    [suggestionsComedy addObject:show];
+    
+    
     
     XYZShow *show2=[[XYZShow alloc] init];
     show2.channelID=2;
@@ -68,7 +71,8 @@
     show2.isLiked = NO;
     show2.duration = 85;
     
-    [suggestionsCrime addObject:show2];
+    [suggestionsAdventure addObject:show2];
+    [suggestionsFantasy addObject:show2];
     
     XYZShow *show3=[[XYZShow alloc] init];
     show3.channelID=3;
@@ -82,7 +86,7 @@
     show3.isLiked = NO;
     show3.duration = 207;
     
-    [suggestionsReality addObject:show3];
+    [suggestionsComedy addObject:show3];
     
     XYZShow *show4=[[XYZShow alloc] init];
     show4.channelID=4;
@@ -96,7 +100,10 @@
     show4.isLiked = NO;
     show4.duration = 126;
     
-    [suggestionsSports addObject:show4];
+    [suggestionsDrama addObject:show4];
+    [suggestionsFantasy addObject:show4];
+    [suggestionsAdventure addObject:show4];
+    
     
     XYZShow *show5=[[XYZShow alloc] init];
     show5.channelID=5;
@@ -110,7 +117,7 @@
     show5.isLiked = NO;
     show5.duration = 163;
     
-    [suggestionsSports addObject:show5];
+    [suggestionsFantasy addObject:show5];
     
     XYZShow *show6=[[XYZShow alloc] init];
     show6.channelID=6;
@@ -124,7 +131,8 @@
     show6.isLiked = NO;
     show6.duration = 239;
     
-    [suggestionsSports addObject:show6];
+    [suggestionsFantasy addObject:show6];
+    [suggestionsAdventure addObject:show6];
     
     XYZShow *show7=[[XYZShow alloc] init];
     show7.channelID=7;
@@ -138,27 +146,39 @@
     show7.isLiked = NO;
     show7.duration = 191;
     
-    [suggestionsCrime addObject:show7];
+    [suggestionsFantasy addObject:show7];
+    [suggestionsAdventure addObject:show7];
+    
+    
+    
+    XYZShow *show8=[[XYZShow alloc] init];
+    show8.channelID=8;
+    show8.showID=8;
+    show8.showName= @"Germany vs Brasil";
+    show8.facebookLikes = 10666;
+    show8.imdbRatings = 9.9;
+    show8.isLive = YES;
+    show8.imageURL = @"GermanyBrazil.png";
+    show8.progress = 6700.6f;
+    show8.isLiked = NO;
+    show8.duration = 121;
+    
+    [suggestionsSports addObject:show8];
+
 
     
     
     
-
-
-
     
     
-    
-    
-    
-    if ([_category isEqualToString:@"Crime"]) {
-        _suggestionsToShow = suggestionsCrime;
+    if ([_category isEqualToString:@"Comedy"]) {
+        _suggestionsToShow = suggestionsComedy;
     }if ([_category isEqualToString:@"Sport"]) {
         _suggestionsToShow = suggestionsSports;
-    }if ([_category isEqualToString:@"Reality"]) {
-        _suggestionsToShow = suggestionsReality;
-    }if ([_category isEqualToString:@"Action"]) {
-        _suggestionsToShow = suggestionsAction;
+    }if ([_category isEqualToString:@"Fantasy"]) {
+        _suggestionsToShow = suggestionsFantasy;
+    }if ([_category isEqualToString:@"Adventure"]) {
+        _suggestionsToShow = suggestionsAdventure;
     }if ([_category isEqualToString:@"Drama"]) {
         _suggestionsToShow = suggestionsDrama;
     }

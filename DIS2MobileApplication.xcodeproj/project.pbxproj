@@ -11,6 +11,7 @@
 		3592FEC619759E5F00B61B2F /* SuggestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3592FEC519759E5F00B61B2F /* SuggestionsViewController.m */; };
 		3592FEC91975A68B00B61B2F /* Show.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3592FEC81975A68B00B61B2F /* Show.xib */; };
 		3592FECC1975A7AE00B61B2F /* XYZShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3592FECB1975A7AE00B61B2F /* XYZShowView.m */; };
+		3592FECE1975EAC600B61B2F /* GermanyBrazil.png in Resources */ = {isa = PBXBuildFile; fileRef = 3592FECD1975EAC600B61B2F /* GermanyBrazil.png */; };
 		5A476227196704FB00E30E3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A476226196704FB00E30E3F /* Foundation.framework */; };
 		5A476229196704FB00E30E3F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A476228196704FB00E30E3F /* CoreGraphics.framework */; };
 		5A47622B196704FB00E30E3F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A47622A196704FB00E30E3F /* UIKit.framework */; };
@@ -75,6 +76,7 @@
 		3592FEC81975A68B00B61B2F /* Show.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Show.xib; sourceTree = "<group>"; };
 		3592FECA1975A7AE00B61B2F /* XYZShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZShowView.h; sourceTree = "<group>"; };
 		3592FECB1975A7AE00B61B2F /* XYZShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZShowView.m; sourceTree = "<group>"; };
+		3592FECD1975EAC600B61B2F /* GermanyBrazil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GermanyBrazil.png; sourceTree = "<group>"; };
 		5A476223196704FB00E30E3F /* DIS2MobileApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DIS2MobileApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A476226196704FB00E30E3F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5A476228196704FB00E30E3F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -262,6 +264,7 @@
 		5A47625F1967056E00E30E3F /* Shows */ = {
 			isa = PBXGroup;
 			children = (
+				3592FECD1975EAC600B61B2F /* GermanyBrazil.png */,
 				5A6095EC1973F7EB000EBBEC /* StrangeLove.png */,
 				5A6095D71973E35F000EBBEC /* Frozen.png */,
 				5A6095D81973E35F000EBBEC /* Edge.png */,
@@ -498,6 +501,7 @@
 				5A6095EF19744B6F000EBBEC /* AllComments.xib in Resources */,
 				5AEA66B3196F3E700076D38F /* Suggest.png in Resources */,
 				5ABFC5A71968C34600EE3612 /* ReadMore.png in Resources */,
+				3592FECE1975EAC600B61B2F /* GermanyBrazil.png in Resources */,
 				5A47623A196704FB00E30E3F /* Main.storyboard in Resources */,
 				5ABFC5A81968C34600EE3612 /* Share.png in Resources */,
 				5AEA66B8196F46470076D38F /* Devashish.png in Resources */,

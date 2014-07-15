@@ -115,6 +115,19 @@
     
     [self.shows addObject:show7];
     
+    XYZShow *show8=[[XYZShow alloc] init];
+    show8.channelID=8;
+    show8.showID=8;
+    show8.showName= @"Germany vs Brasil";
+    show8.facebookLikes = 10555666;
+    show8.imdbRatings = 9.2;
+    show8.isLive = YES;
+    show8.imageURL = @"GermanyBrazil.png";
+    show8.progress = 6700.6f;
+    show8.isLiked = NO;
+    show8.duration = 191;
+    
+    [self.shows addObject:show8];
    
     return self;
     

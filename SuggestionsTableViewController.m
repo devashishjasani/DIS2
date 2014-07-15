@@ -28,7 +28,7 @@
     [super viewDidLoad];
     
 
-    _suggestions = [NSArray arrayWithObjects:@"Drama",@"Sport",@"Reality",@"Action",nil];
+    _suggestions = [NSArray arrayWithObjects:@"Drama",@"Sport",@"Adventure",@"Fantasy",@"Comedy", nil];
     
     
     
