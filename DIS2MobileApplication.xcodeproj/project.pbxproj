@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3592FEC31975979C00B61B2F /* SuggestionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3592FEC21975979C00B61B2F /* SuggestionsTableViewController.m */; };
 		5A476227196704FB00E30E3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A476226196704FB00E30E3F /* Foundation.framework */; };
 		5A476229196704FB00E30E3F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A476228196704FB00E30E3F /* CoreGraphics.framework */; };
 		5A47622B196704FB00E30E3F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A47622A196704FB00E30E3F /* UIKit.framework */; };
@@ -64,6 +65,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3592FEC11975979C00B61B2F /* SuggestionsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuggestionsTableViewController.h; sourceTree = "<group>"; };
+		3592FEC21975979C00B61B2F /* SuggestionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuggestionsTableViewController.m; sourceTree = "<group>"; };
 		5A476223196704FB00E30E3F /* DIS2MobileApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DIS2MobileApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A476226196704FB00E30E3F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5A476228196704FB00E30E3F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -153,6 +156,8 @@
 		5A47621A196704FB00E30E3F = {
 			isa = PBXGroup;
 			children = (
+				3592FEC11975979C00B61B2F /* SuggestionsTableViewController.h */,
+				3592FEC21975979C00B61B2F /* SuggestionsTableViewController.m */,
 				5A47622C196704FB00E30E3F /* DIS2MobileApplication */,
 				5A47624E196704FB00E30E3F /* DIS2MobileApplicationTests */,
 				5A476225196704FB00E30E3F /* Frameworks */,
@@ -495,6 +500,7 @@
 			files = (
 				5AEA66AE196BFCBB0076D38F /* XYZShow.m in Sources */,
 				5A6095C119722073000EBBEC /* XYZFriendsNowWatchingViewController.m in Sources */,
+				3592FEC31975979C00B61B2F /* SuggestionsTableViewController.m in Sources */,
 				5A6095F219744D49000EBBEC /* XYZAllComments.m in Sources */,
 				5A476237196704FB00E30E3F /* XYZAppDelegate.m in Sources */,
 				5A6095D219728C1C000EBBEC /* XYZProfile.m in Sources */,

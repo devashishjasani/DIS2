@@ -17,31 +17,57 @@
                     <connections>
                         <segue destination="EwJ-vd-ct2" kind="relationship" relationship="viewControllers" id="Ei8-g8-dk0"/>
                         <segue destination="E4c-Qf-SXq" kind="relationship" relationship="viewControllers" id="dDx-GO-uv1"/>
-                        <segue destination="55h-YT-Rvs" kind="relationship" relationship="viewControllers" id="oor-xo-6c2"/>
+                        <segue destination="gdX-xY-w58" kind="relationship" relationship="viewControllers" id="eJj-mn-UNN"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="58" y="56"/>
         </scene>
-        <!--View Controller - Suggestions-->
-        <scene sceneID="fq9-pw-Y8P">
+        <!--Suggestions Table View Controller - Suggestions-->
+        <scene sceneID="mj2-KN-Gqr">
             <objects>
-                <viewController id="55h-YT-Rvs" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gZm-8j-7rs"/>
-                        <viewControllerLayoutGuide type="bottom" id="gNf-GT-PAX"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8N8-wf-6Du">
+                <tableViewController id="k36-oW-Zs6" customClass="SuggestionsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="22" sectionFooterHeight="22" id="TtZ-J0-wOA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Suggestions" id="ITg-L1-Xjq"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fnm-EG-ehl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="55" id="cgG-Vn-Hgv">
+                                <rect key="frame" x="0.0" y="86" width="320" height="55"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cgG-Vn-Hgv" id="3wy-fN-ImE">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="k36-oW-Zs6" id="nUj-xd-H7v"/>
+                            <outlet property="delegate" destination="k36-oW-Zs6" id="CEM-tq-hdf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Suggestions" id="Pvg-81-Xo8"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cEa-o3-0OY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="573" y="975"/>
+            <point key="canvasLocation" x="980" y="974"/>
+        </scene>
+        <!--Navigation Controller - Suggestions-->
+        <scene sceneID="EGf-Ag-lgA">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="gdX-xY-w58" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Suggestions" id="zp8-n8-SBa"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ejW-ou-Bbr">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="k36-oW-Zs6" kind="relationship" relationship="rootViewController" id="hfY-Ld-aeS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YLo-1d-IqA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="573" y="974"/>
         </scene>
         <!--Friends Now Watching View Controller - Friends Feed-->
         <scene sceneID="WKX-TQ-Hcs">
