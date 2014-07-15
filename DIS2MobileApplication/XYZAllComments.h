@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *myComment;
 @property (weak, nonatomic) IBOutlet UIView *commentsPlaceholfer;
 
+@property (weak, nonatomic) IBOutlet UIButton *doneButton;
 
 - (IBAction)doneCommenting:(id)sender;
 
