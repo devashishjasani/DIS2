@@ -55,61 +55,7 @@
     NSLog(@"DOWN");
     //        [UIView transitionFromView:self toView:nil duration:0.7f options:UIViewAnimationOptionTransitionCurlUp completion:nil];
     
-    UIView *view= (UIView*)sender;
-    
-    // create the view
-    UIView *confirmRemoveView = [[UIView alloc] initWithFrame:view.frame];
-    confirmRemoveView.backgroundColor = [UIColor lightGrayColor];
-    //add label
-    
-    
-    // add the buttons
-    UIButton * undoButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    undoButton.titleLabel.text = @"Undo";
-    
-    UIButton * removeButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    undoButton.titleLabel.text = @"Remove";
-    
-    
-    [UIView animateWithDuration:0.7f animations:^
-     {
-         self.frame = CGRectMake(self.frame.size.width*self.tag, +500, self.frame.size.width, self.frame.size.height);
-         
-     } completion:^(BOOL finished)
-     {
-         self.frame = CGRectMake(self.frame.size.width*self.tag, 0, self.frame.size.width, self.frame.size.height);
-         [self.delegate changeTVChannel:self.showId];
-         
-         
-     }];
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    // slide down the show
-    
-    [UIView animateWithDuration:0.7f animations:^
-     {
-         self.frame = CGRectMake(self.frame.size.width*self.tag, +500, self.frame.size.width, self.frame.size.height);
-         
-     } completion:^(BOOL finished)
-     {
-         self.frame = CGRectMake(self.frame.size.width*self.tag, 0, self.frame.size.width, self.frame.size.height);
-         [self.delegate changeTVChannel:self.showId];
-         
-         
-     }];
-    
-
+    [self.delegate undo:self];
 
     
     

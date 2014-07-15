@@ -228,6 +228,56 @@
 
 
 
+
+-(void) undo:(UIView *)view {
+    
+//    UIView *view= (UIView*)sender;
+    
+    // create the view
+    UIView *confirmRemoveView = [[UIView alloc] initWithFrame:CGRectMake(view.frame.origin.x+10,view.frame.origin.y+10, view.frame.size.width-20, view.frame.size.height-20)];
+    confirmRemoveView.backgroundColor = [UIColor lightGrayColor];
+    confirmRemoveView.layer.cornerRadius = 5;
+    confirmRemoveView.alpha = 0.;
+    //add label
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 10, confirmRemoveView.frame.size.width-40, 50)];
+    label.text = @"Do you want to remove the show from your suggestions?";
+    label.textAlignment = NSTextAlignmentCenter;
+    label.numberOfLines = 0;
+    [confirmRemoveView addSubview:label];
+    
+    // add the buttons
+    UIButton *undoButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [undoButton setFrame:CGRectMake(20, 60, 50, 20)];
+    undoButton.titleLabel.text = @"Cancel";
+    undoButton.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [confirmRemoveView addSubview:undoButton];
+    
+//    UIButton * removeButton = [UIButton buttonWithType:UIButtonTypeSystem];
+//    [removeButton setFrame:CGRectMake(0, 60, 50, 20)];
+//    removeButton.titleLabel.text = @"Remove";
+//    removeButton.titleLabel.textAlignment = NSTextAlignmentCenter;
+//        [confirmRemoveView addSubview:removeButton];
+//    
+    [_horizontalScrollView addSubview:confirmRemoveView];
+    
+    
+    [UIView animateWithDuration:0.7f animations:^
+     {
+         confirmRemoveView.alpha = 1.;
+         view.frame = CGRectMake(view.frame.size.width*view.tag, +500, view.frame.size.width, view.frame.size.height);
+         
+     } completion:^(BOOL finished)
+     {
+//         view.frame = CGRectMake(view.frame.size.width*view.tag, 0, view.frame.size.width, view.frame.size.height);
+//         [view.delegate changeTVChannel:view.showId];
+         
+         
+     }];
+    
+    
+}
+
+
 - (void) changeTVChannel:(NSUInteger)showId
 {
     

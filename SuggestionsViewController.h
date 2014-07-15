@@ -13,5 +13,5 @@
 @property NSString *category;
 @property (weak, nonatomic) IBOutlet UIScrollView *horizontalScrollView;
 @property NSArray *suggestionsToShow;
-
+-(void) undo:(UIView *)view;
 @end

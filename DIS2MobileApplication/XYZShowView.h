@@ -6,7 +6,7 @@
 @protocol XYZShowViewDelegate <NSObject>
 
 - (void) changeTVChannel: (NSUInteger) showId;
-
+-(void) undo:(UIView *)view;
 @end
 
 @interface XYZShowView : UIView
