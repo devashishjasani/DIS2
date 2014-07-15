@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3592FEC31975979C00B61B2F /* SuggestionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3592FEC21975979C00B61B2F /* SuggestionsTableViewController.m */; };
+		3592FEC619759E5F00B61B2F /* SuggestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3592FEC519759E5F00B61B2F /* SuggestionsViewController.m */; };
 		5A476227196704FB00E30E3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A476226196704FB00E30E3F /* Foundation.framework */; };
 		5A476229196704FB00E30E3F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A476228196704FB00E30E3F /* CoreGraphics.framework */; };
 		5A47622B196704FB00E30E3F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A47622A196704FB00E30E3F /* UIKit.framework */; };
@@ -67,6 +68,8 @@
 /* Begin PBXFileReference section */
 		3592FEC11975979C00B61B2F /* SuggestionsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuggestionsTableViewController.h; sourceTree = "<group>"; };
 		3592FEC21975979C00B61B2F /* SuggestionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuggestionsTableViewController.m; sourceTree = "<group>"; };
+		3592FEC419759E5F00B61B2F /* SuggestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuggestionsViewController.h; sourceTree = "<group>"; };
+		3592FEC519759E5F00B61B2F /* SuggestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuggestionsViewController.m; sourceTree = "<group>"; };
 		5A476223196704FB00E30E3F /* DIS2MobileApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DIS2MobileApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A476226196704FB00E30E3F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5A476228196704FB00E30E3F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -153,11 +156,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5A47621A196704FB00E30E3F = {
+		3592FEC719759FBE00B61B2F /* Suggestions */ = {
 			isa = PBXGroup;
 			children = (
 				3592FEC11975979C00B61B2F /* SuggestionsTableViewController.h */,
 				3592FEC21975979C00B61B2F /* SuggestionsTableViewController.m */,
+				3592FEC419759E5F00B61B2F /* SuggestionsViewController.h */,
+				3592FEC519759E5F00B61B2F /* SuggestionsViewController.m */,
+			);
+			name = Suggestions;
+			sourceTree = "<group>";
+		};
+		5A47621A196704FB00E30E3F = {
+			isa = PBXGroup;
+			children = (
+				3592FEC719759FBE00B61B2F /* Suggestions */,
 				5A47622C196704FB00E30E3F /* DIS2MobileApplication */,
 				5A47624E196704FB00E30E3F /* DIS2MobileApplicationTests */,
 				5A476225196704FB00E30E3F /* Frameworks */,
@@ -498,6 +511,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3592FEC619759E5F00B61B2F /* SuggestionsViewController.m in Sources */,
 				5AEA66AE196BFCBB0076D38F /* XYZShow.m in Sources */,
 				5A6095C119722073000EBBEC /* XYZFriendsNowWatchingViewController.m in Sources */,
 				3592FEC31975979C00B61B2F /* SuggestionsTableViewController.m in Sources */,

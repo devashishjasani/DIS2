@@ -10,4 +10,8 @@
 
 @interface SuggestionsTableViewController : UITableViewController
 
+@property (strong, nonatomic) IBOutlet UITableView *suggestionsTV;
+
+@property NSArray *suggestions;
+
 @end

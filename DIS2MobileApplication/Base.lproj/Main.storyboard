@@ -33,13 +33,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="55" id="cgG-Vn-Hgv">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="suggestionCell" rowHeight="55" id="cgG-Vn-Hgv">
                                 <rect key="frame" x="0.0" y="86" width="320" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cgG-Vn-Hgv" id="3wy-fN-ImE">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="54"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Ln8-pP-1ks" kind="push" id="VoD-zU-pwi"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -48,10 +51,41 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Suggestions" id="Pvg-81-Xo8"/>
+                    <connections>
+                        <outlet property="suggestionsTV" destination="TtZ-J0-wOA" id="Yxy-uf-zrM"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cEa-o3-0OY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="980" y="974"/>
+        </scene>
+        <!--Suggestions View Controller-->
+        <scene sceneID="2Q2-9u-Vra">
+            <objects>
+                <viewController id="Ln8-pP-1ks" customClass="SuggestionsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZpF-jH-XVh"/>
+                        <viewControllerLayoutGuide type="bottom" id="dAF-pY-UV0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bpU-83-0cC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OHU-hy-z3d">
+                                <rect key="frame" x="-6" y="0.0" width="326" height="480"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hba-cq-3bS"/>
+                    <connections>
+                        <outlet property="horizontalScrollView" destination="OHU-hy-z3d" id="tjP-Bp-x0i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dxt-Jg-sDp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1343" y="974"/>
         </scene>
         <!--Navigation Controller - Suggestions-->
         <scene sceneID="EGf-Ag-lgA">
