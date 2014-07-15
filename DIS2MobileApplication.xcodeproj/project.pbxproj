@@ -37,6 +37,10 @@
 		5A6095E81973E3C1000EBBEC /* XYZAllShows.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6095E71973E3C1000EBBEC /* XYZAllShows.m */; };
 		5A6095EB1973F1BF000EBBEC /* XYZAllPosts.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6095EA1973F1BF000EBBEC /* XYZAllPosts.m */; };
 		5A6095ED1973F7EB000EBBEC /* StrangeLove.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A6095EC1973F7EB000EBBEC /* StrangeLove.png */; };
+		5A6095EF19744B6F000EBBEC /* AllComments.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A6095EE19744B6F000EBBEC /* AllComments.xib */; };
+		5A6095F219744D49000EBBEC /* XYZAllComments.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6095F119744D49000EBBEC /* XYZAllComments.m */; };
+		5A6095F619744DF8000EBBEC /* Comment.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A6095F519744DF8000EBBEC /* Comment.xib */; };
+		5A6095F919744F8A000EBBEC /* XYZComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6095F819744F8A000EBBEC /* XYZComment.m */; };
 		5ABFC59519684D3D00EE3612 /* XYZNowWatchingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABFC59419684D3D00EE3612 /* XYZNowWatchingViewController.m */; };
 		5ABFC59B1968537D00EE3612 /* XYZNowWatchingPreviewFront.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABFC59A1968537D00EE3612 /* XYZNowWatchingPreviewFront.m */; };
 		5ABFC59E196853D300EE3612 /* XYZNowWatchingPreviewBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABFC59D196853D300EE3612 /* XYZNowWatchingPreviewBack.m */; };
@@ -100,6 +104,12 @@
 		5A6095E91973F1BF000EBBEC /* XYZAllPosts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZAllPosts.h; sourceTree = "<group>"; };
 		5A6095EA1973F1BF000EBBEC /* XYZAllPosts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZAllPosts.m; sourceTree = "<group>"; };
 		5A6095EC1973F7EB000EBBEC /* StrangeLove.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StrangeLove.png; sourceTree = "<group>"; };
+		5A6095EE19744B6F000EBBEC /* AllComments.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllComments.xib; sourceTree = "<group>"; };
+		5A6095F019744D49000EBBEC /* XYZAllComments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZAllComments.h; sourceTree = "<group>"; };
+		5A6095F119744D49000EBBEC /* XYZAllComments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZAllComments.m; sourceTree = "<group>"; };
+		5A6095F519744DF8000EBBEC /* Comment.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Comment.xib; sourceTree = "<group>"; };
+		5A6095F719744F8A000EBBEC /* XYZComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZComment.h; sourceTree = "<group>"; };
+		5A6095F819744F8A000EBBEC /* XYZComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZComment.m; sourceTree = "<group>"; };
 		5ABFC59319684D3D00EE3612 /* XYZNowWatchingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZNowWatchingViewController.h; sourceTree = "<group>"; };
 		5ABFC59419684D3D00EE3612 /* XYZNowWatchingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZNowWatchingViewController.m; sourceTree = "<group>"; };
 		5ABFC5991968537D00EE3612 /* XYZNowWatchingPreviewFront.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZNowWatchingPreviewFront.h; sourceTree = "<group>"; };
@@ -331,6 +341,12 @@
 				5A6095C219722424000EBBEC /* Post.xib */,
 				5A6095C719727849000EBBEC /* XYZPostView.h */,
 				5A6095C819727849000EBBEC /* XYZPostView.m */,
+				5A6095EE19744B6F000EBBEC /* AllComments.xib */,
+				5A6095F019744D49000EBBEC /* XYZAllComments.h */,
+				5A6095F119744D49000EBBEC /* XYZAllComments.m */,
+				5A6095F519744DF8000EBBEC /* Comment.xib */,
+				5A6095F719744F8A000EBBEC /* XYZComment.h */,
+				5A6095F819744F8A000EBBEC /* XYZComment.m */,
 			);
 			name = "XIB and Views";
 			sourceTree = "<group>";
@@ -442,6 +458,7 @@
 				5A476242196704FB00E30E3F /* Images.xcassets in Resources */,
 				5ABFC5A61968C34600EE3612 /* Like.png in Resources */,
 				5A6095ED1973F7EB000EBBEC /* StrangeLove.png in Resources */,
+				5A6095F619744DF8000EBBEC /* Comment.xib in Resources */,
 				5A476231196704FB00E30E3F /* InfoPlist.strings in Resources */,
 				5A4762611967064700E30E3F /* GameOfThrones.png in Resources */,
 				5AEA66BA196F55D80076D38F /* Play.png in Resources */,
@@ -451,6 +468,7 @@
 				5A6095DF1973E35F000EBBEC /* Hobbit.png in Resources */,
 				5A6095E11973E35F000EBBEC /* Matrix.png in Resources */,
 				5A6095DD1973E35F000EBBEC /* Frozen.png in Resources */,
+				5A6095EF19744B6F000EBBEC /* AllComments.xib in Resources */,
 				5AEA66B3196F3E700076D38F /* Suggest.png in Resources */,
 				5ABFC5A71968C34600EE3612 /* ReadMore.png in Resources */,
 				5A47623A196704FB00E30E3F /* Main.storyboard in Resources */,
@@ -477,6 +495,7 @@
 			files = (
 				5AEA66AE196BFCBB0076D38F /* XYZShow.m in Sources */,
 				5A6095C119722073000EBBEC /* XYZFriendsNowWatchingViewController.m in Sources */,
+				5A6095F219744D49000EBBEC /* XYZAllComments.m in Sources */,
 				5A476237196704FB00E30E3F /* XYZAppDelegate.m in Sources */,
 				5A6095D219728C1C000EBBEC /* XYZProfile.m in Sources */,
 				5A6095E81973E3C1000EBBEC /* XYZAllShows.m in Sources */,
@@ -487,6 +506,7 @@
 				5A6095EB1973F1BF000EBBEC /* XYZAllPosts.m in Sources */,
 				5A6095CF1972895A000EBBEC /* XYZPost.m in Sources */,
 				5A476233196704FB00E30E3F /* main.m in Sources */,
+				5A6095F919744F8A000EBBEC /* XYZComment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

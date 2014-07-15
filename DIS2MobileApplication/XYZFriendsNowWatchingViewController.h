@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "XYZPostView.h"
+#import "XYZAllComments.h"
 
 
 @interface XYZFriendsNowWatchingViewController : UIViewController<UIScrollViewDelegate,XYZPostViewDelegate>

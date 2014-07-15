@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "XYZPost.h"
 
+
 @protocol XYZPostViewDelegate <NSObject>
 
 - (void) changeTVChannel: (NSUInteger) showId;
@@ -34,10 +35,11 @@
 @property id<XYZPostViewDelegate> delegate;
 
 
+
 @property (weak, nonatomic) IBOutlet UIView *flickableView;
 
 
-
+- (IBAction)comment:(id)sender;
 
 - (id)initWithPost:(XYZPost *)post;
 

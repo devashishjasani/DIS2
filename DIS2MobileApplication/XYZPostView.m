@@ -8,6 +8,7 @@
 
 #import "XYZPostView.h"
 #import "XYZPost.h"
+#import "XYZAllComments.h"
 
 @implementation XYZPostView
 //
@@ -58,6 +59,17 @@
 }
 
 
+
+- (IBAction)comment:(id)sender {
+    
+    XYZAllComments *allComments = [[XYZAllComments alloc] init];
+    [self addSubview:allComments];
+    
+    NSLog(@"load comments");
+    
+    
+    
+}
 
 - (id)initWithPost:(XYZPost *)post
 {
