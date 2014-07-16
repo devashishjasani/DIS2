@@ -17,13 +17,93 @@
                     <connections>
                         <segue destination="EwJ-vd-ct2" kind="relationship" relationship="viewControllers" id="Ei8-g8-dk0"/>
                         <segue destination="E4c-Qf-SXq" kind="relationship" relationship="viewControllers" id="dDx-GO-uv1"/>
+                        <segue destination="gdX-xY-w58" kind="relationship" relationship="viewControllers" id="eJj-mn-UNN"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="58" y="56"/>
         </scene>
-        <!--Friends Now Watching View Controller - SUGGESTIONS-->
+        <!--Suggestions Table View Controller - Suggestions-->
+        <scene sceneID="mj2-KN-Gqr">
+            <objects>
+                <tableViewController id="k36-oW-Zs6" customClass="SuggestionsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="22" sectionFooterHeight="22" id="TtZ-J0-wOA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="suggestionCell" rowHeight="55" id="cgG-Vn-Hgv">
+                                <rect key="frame" x="0.0" y="86" width="320" height="55"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cgG-Vn-Hgv" id="3wy-fN-ImE">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="54"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Ln8-pP-1ks" kind="push" id="aP0-Wp-gBs"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="k36-oW-Zs6" id="nUj-xd-H7v"/>
+                            <outlet property="delegate" destination="k36-oW-Zs6" id="CEM-tq-hdf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Suggestions" id="Pvg-81-Xo8"/>
+                    <connections>
+                        <outlet property="suggestionsTV" destination="TtZ-J0-wOA" id="Yxy-uf-zrM"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cEa-o3-0OY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="974"/>
+        </scene>
+        <!--Suggestions View Controller-->
+        <scene sceneID="2Q2-9u-Vra">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Ln8-pP-1ks" customClass="SuggestionsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZpF-jH-XVh"/>
+                        <viewControllerLayoutGuide type="bottom" id="dAF-pY-UV0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bpU-83-0cC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6p-ft-Arx">
+                                <rect key="frame" x="0.0" y="107" width="320" height="265"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hba-cq-3bS"/>
+                    <connections>
+                        <outlet property="horizontalScrollView" destination="a6p-ft-Arx" id="bEj-wp-0Aq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dxt-Jg-sDp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1343" y="974"/>
+        </scene>
+        <!--Navigation Controller - Suggestions-->
+        <scene sceneID="EGf-Ag-lgA">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="gdX-xY-w58" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Suggestions" id="zp8-n8-SBa"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ejW-ou-Bbr">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="k36-oW-Zs6" kind="relationship" relationship="rootViewController" id="hfY-Ld-aeS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YLo-1d-IqA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="573" y="974"/>
+        </scene>
+        <!--Friends Now Watching View Controller - Friends Feed-->
         <scene sceneID="WKX-TQ-Hcs">
             <objects>
                 <viewController id="E4c-Qf-SXq" customClass="XYZFriendsNowWatchingViewController" sceneMemberID="viewController">
@@ -42,7 +122,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="SUGGESTIONS" id="C4A-b7-PfE"/>
+                    <tabBarItem key="tabBarItem" title="Friends Feed" id="C4A-b7-PfE"/>
                     <connections>
                         <outlet property="horizontalScroll" destination="Wse-9A-NeX" id="D2O-Aw-Wgi"/>
                     </connections>

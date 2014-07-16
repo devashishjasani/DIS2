@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3592FEC31975979C00B61B2F /* SuggestionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3592FEC21975979C00B61B2F /* SuggestionsTableViewController.m */; };
+		3592FEC619759E5F00B61B2F /* SuggestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3592FEC519759E5F00B61B2F /* SuggestionsViewController.m */; };
+		3592FEC91975A68B00B61B2F /* Show.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3592FEC81975A68B00B61B2F /* Show.xib */; };
+		3592FECC1975A7AE00B61B2F /* XYZShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3592FECB1975A7AE00B61B2F /* XYZShowView.m */; };
 		5A476227196704FB00E30E3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A476226196704FB00E30E3F /* Foundation.framework */; };
 		5A476229196704FB00E30E3F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A476228196704FB00E30E3F /* CoreGraphics.framework */; };
 		5A47622B196704FB00E30E3F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A47622A196704FB00E30E3F /* UIKit.framework */; };
@@ -68,6 +72,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3592FEC11975979C00B61B2F /* SuggestionsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuggestionsTableViewController.h; sourceTree = "<group>"; };
+		3592FEC21975979C00B61B2F /* SuggestionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuggestionsTableViewController.m; sourceTree = "<group>"; };
+		3592FEC419759E5F00B61B2F /* SuggestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuggestionsViewController.h; sourceTree = "<group>"; };
+		3592FEC519759E5F00B61B2F /* SuggestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuggestionsViewController.m; sourceTree = "<group>"; };
+		3592FEC81975A68B00B61B2F /* Show.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Show.xib; sourceTree = "<group>"; };
+		3592FECA1975A7AE00B61B2F /* XYZShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZShowView.h; sourceTree = "<group>"; };
+		3592FECB1975A7AE00B61B2F /* XYZShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZShowView.m; sourceTree = "<group>"; };
 		5A476223196704FB00E30E3F /* DIS2MobileApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DIS2MobileApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A476226196704FB00E30E3F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5A476228196704FB00E30E3F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -159,9 +170,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3592FEC719759FBE00B61B2F /* Suggestions */ = {
+			isa = PBXGroup;
+			children = (
+				3592FEC11975979C00B61B2F /* SuggestionsTableViewController.h */,
+				3592FEC21975979C00B61B2F /* SuggestionsTableViewController.m */,
+				3592FEC419759E5F00B61B2F /* SuggestionsViewController.h */,
+				3592FEC519759E5F00B61B2F /* SuggestionsViewController.m */,
+			);
+			name = Suggestions;
+			sourceTree = "<group>";
+		};
 		5A47621A196704FB00E30E3F = {
 			isa = PBXGroup;
 			children = (
+				3592FEC719759FBE00B61B2F /* Suggestions */,
 				5A47622C196704FB00E30E3F /* DIS2MobileApplication */,
 				5A47624E196704FB00E30E3F /* DIS2MobileApplicationTests */,
 				5A476225196704FB00E30E3F /* Frameworks */,
@@ -300,9 +323,9 @@
 		5ABFC59F1968545F00EE3612 /* PreviewFront */ = {
 			isa = PBXGroup;
 			children = (
+				5A47626219673D8F00E30E3F /* NowWatchingPreviewFront.xib */,
 				5ABFC5991968537D00EE3612 /* XYZNowWatchingPreviewFront.h */,
 				5ABFC59A1968537D00EE3612 /* XYZNowWatchingPreviewFront.m */,
-				5A47626219673D8F00E30E3F /* NowWatchingPreviewFront.xib */,
 			);
 			name = PreviewFront;
 			sourceTree = "<group>";
@@ -350,9 +373,12 @@
 		5AEA66A8196BFC150076D38F /* XIB and Views */ = {
 			isa = PBXGroup;
 			children = (
+				3592FEC81975A68B00B61B2F /* Show.xib */,
 				5A6095C219722424000EBBEC /* Post.xib */,
 				5A6095C719727849000EBBEC /* XYZPostView.h */,
 				5A6095C819727849000EBBEC /* XYZPostView.m */,
+				3592FECA1975A7AE00B61B2F /* XYZShowView.h */,
+				3592FECB1975A7AE00B61B2F /* XYZShowView.m */,
 				5A6095EE19744B6F000EBBEC /* AllComments.xib */,
 				5A6095F019744D49000EBBEC /* XYZAllComments.h */,
 				5A6095F119744D49000EBBEC /* XYZAllComments.m */,
@@ -482,6 +508,7 @@
 				5ABFC5A61968C34600EE3612 /* Like.png in Resources */,
 				5A6095ED1973F7EB000EBBEC /* StrangeLove.png in Resources */,
 				5A6095F619744DF8000EBBEC /* Comment.xib in Resources */,
+				3592FEC91975A68B00B61B2F /* Show.xib in Resources */,
 				5A476231196704FB00E30E3F /* InfoPlist.strings in Resources */,
 				5A4762611967064700E30E3F /* GameOfThrones.png in Resources */,
 				5AEA66BA196F55D80076D38F /* Play.png in Resources */,
@@ -518,8 +545,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3592FEC619759E5F00B61B2F /* SuggestionsViewController.m in Sources */,
 				5AEA66AE196BFCBB0076D38F /* XYZShow.m in Sources */,
 				5A6095C119722073000EBBEC /* XYZFriendsNowWatchingViewController.m in Sources */,
+				3592FEC31975979C00B61B2F /* SuggestionsTableViewController.m in Sources */,
 				5A6095F219744D49000EBBEC /* XYZAllComments.m in Sources */,
 				5A476237196704FB00E30E3F /* XYZAppDelegate.m in Sources */,
 				5A6095D219728C1C000EBBEC /* XYZProfile.m in Sources */,
@@ -530,6 +559,7 @@
 				5ABFC59B1968537D00EE3612 /* XYZNowWatchingPreviewFront.m in Sources */,
 				82D741611975DF5500B16347 /* XYZShareView.m in Sources */,
 				5A6095EB1973F1BF000EBBEC /* XYZAllPosts.m in Sources */,
+				3592FECC1975A7AE00B61B2F /* XYZShowView.m in Sources */,
 				5A6095CF1972895A000EBBEC /* XYZPost.m in Sources */,
 				5A476233196704FB00E30E3F /* main.m in Sources */,
 				5A6095F919744F8A000EBBEC /* XYZComment.m in Sources */,
