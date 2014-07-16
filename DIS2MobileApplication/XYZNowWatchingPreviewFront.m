@@ -50,14 +50,17 @@
 
     self.progressBar.progress = show.progress;
 
+
+    self.playButton.layer.cornerRadius = 25;
+    self.pauseButton.layer.cornerRadius = 25;
         
     if(show.isLive)
     {
         [self.live setHidden:NO];
         [self.seekBar setHidden:YES];
         
-        
-        
+        [self.playButton setHidden:YES];
+        [self.pauseButton setHidden:YES];
         
     }
     else
@@ -65,6 +68,8 @@
         [self.live setHidden:YES];
         [self.progressBar setHidden:YES];
         
+
+
         
     }
    

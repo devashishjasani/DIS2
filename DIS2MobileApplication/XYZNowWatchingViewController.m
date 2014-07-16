@@ -56,6 +56,7 @@
     [self.previewHolder addSubview:self.previewFront];
     
     
+    
 }
 
 
