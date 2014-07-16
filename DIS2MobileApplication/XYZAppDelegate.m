@@ -7,6 +7,7 @@
 //
 
 #import "XYZAppDelegate.h"
+#import "XYZAllPosts.h"
 
 @implementation XYZAppDelegate
 
@@ -18,6 +19,7 @@
     // Override point for customization after application launch.
     
     self.allShows = [[XYZAllShows alloc] init];
+    self.allPosts = [[XYZAllPosts alloc] init];
     self.channelNowPlaying = 1;
     
     

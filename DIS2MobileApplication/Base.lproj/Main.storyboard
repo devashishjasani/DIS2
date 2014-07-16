@@ -91,7 +91,7 @@
         <scene sceneID="EGf-Ag-lgA">
             <objects>
                 <navigationController definesPresentationContext="YES" id="gdX-xY-w58" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Suggestions" id="zp8-n8-SBa"/>
+                    <tabBarItem key="tabBarItem" title="Suggestions" image="rss-32.png" id="zp8-n8-SBa"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ejW-ou-Bbr">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.0" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -126,7 +126,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Friends Feed" id="C4A-b7-PfE"/>
+                    <tabBarItem key="tabBarItem" title="Friends Feed" image="activity_feed-32.png" id="C4A-b7-PfE"/>
                     <connections>
                         <outlet property="horizontalScroll" destination="Wse-9A-NeX" id="D2O-Aw-Wgi"/>
                     </connections>
@@ -148,16 +148,60 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y5o-7p-vbK">
-                                <rect key="frame" x="0.0" y="80" width="320" height="316"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="316"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I0Y-wS-neJ">
+                                <rect key="frame" x="0.0" y="334" width="320" height="98"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Devashish.png" translatesAutoresizingMaskIntoConstraints="NO" id="KBD-0z-GGD">
+                                        <rect key="frame" x="10" y="23" width="65" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="And there he goes! What a performance" translatesAutoresizingMaskIntoConstraints="NO" id="uXF-rt-cqx">
+                                        <rect key="frame" x="81" y="23" width="203" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Just Now" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9X-kS-DJc">
+                                        <rect key="frame" x="84" y="66" width="73" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="11"/>
+                                        <color key="textColor" red="0.0" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JkR-k3-mbs">
+                                        <rect key="frame" x="282" y="41" width="31" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="All">
+                                            <color key="titleColor" red="0.167922247" green="0.32854352679999999" blue="0.007300967262" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showAllUpdates:" destination="EwJ-vd-ct2" eventType="touchUpInside" id="svY-Sk-tVV"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="   Recent Updates" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPW-iB-D1e">
+                                        <rect key="frame" x="0.0" y="-2" width="320" height="19"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.40955835459183676" blue="0.40955835459183676" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="NOW" id="ZeI-7c-TYK"/>
+                    <tabBarItem key="tabBarItem" title="NOW" image="play-48.png" id="ZeI-7c-TYK"/>
                     <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="previewHolder" destination="y5o-7p-vbK" id="tUe-1U-Rf1"/>
                     </connections>
@@ -167,6 +211,12 @@
             <point key="canvasLocation" x="566" y="-305"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Devashish.png" width="189" height="193"/>
+        <image name="activity_feed-32.png" width="32" height="32"/>
+        <image name="play-48.png" width="48" height="48"/>
+        <image name="rss-32.png" width="32" height="32"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
