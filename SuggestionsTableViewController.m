@@ -30,7 +30,7 @@
 
     _suggestions = [NSArray arrayWithObjects:@"Drama",@"Sport",@"Adventure",@"Fantasy",@"Comedy", nil];
     
-    
+    self.tabBarController.tabBar.tintColor = [UIColor colorWithRed:0 green:.2 blue:.2 alpha:1];
     
 }
 

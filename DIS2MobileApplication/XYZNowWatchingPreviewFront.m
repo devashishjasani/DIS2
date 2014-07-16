@@ -75,9 +75,9 @@
     }
    
     
-    if(show.isLiked)
+    if(!show.isLiked)
     {
-        self.likeLabel.text = @"Liked";
+        self.likeLabel.text = @"Unlike";
         
     }
     else
@@ -114,11 +114,26 @@
 }
 
 - (IBAction)like:(id)sender {
-    
+    XYZAppDelegate *myDelegate = (XYZAppDelegate *)[[UIApplication sharedApplication] delegate];
+    self.show = myDelegate.allShows.shows[myDelegate.channelNowPlaying];
+    if(!self.show.isLiked)
+    {
+        self.likeLabel.text = @"Unlike";
+
     NSLog(@"Hello");
     self.show.facebookLikes = self.show.facebookLikes +1;
     self.facebookLikes.text = [NSString stringWithFormat:@"You and %@",self.facebookLikes.text];
     
+    self.show.isLiked=YES;
+    }else {
+        self.likeLabel.text = @"Like";
+
+        self.show.facebookLikes = self.show.facebookLikes -1;
+//        self.facebookLikes.text = [NSString stringWithFormat:@"%@",self.facebookLikes.text];
+        self.facebookLikes.text = [NSString stringWithFormat:@"%d like this",self.show.facebookLikes];
+
+        self.show.isLiked=NO;
+    }
     
 
 }
@@ -129,7 +144,8 @@
     _playButton.enabled=NO;
     _playButton.hidden=YES;
     _pauseButton.userInteractionEnabled=YES;
-    _pauseButton.enabled=YES;    XYZAppDelegate *myDelegate = (XYZAppDelegate *)[[UIApplication sharedApplication] delegate];
+    _pauseButton.enabled=YES;
+    XYZAppDelegate *myDelegate = (XYZAppDelegate *)[[UIApplication sharedApplication] delegate];
     NSURL *requestUrl = myDelegate.serverURL;
     NSString *bodyString = [NSString stringWithFormat:@"play"];
     NSMutableURLRequest *userCodeRequest = [NSMutableURLRequest requestWithURL:requestUrl];

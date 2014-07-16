@@ -40,7 +40,7 @@
     [self populateTheScrollView];
     
     //[self.view addSubview:self.horizontalScroll];
-   
+   self.tabBarController.tabBar.tintColor = [UIColor colorWithRed:0 green:.2 blue:.2 alpha:1];
     
 }
 
