@@ -51,6 +51,10 @@
 		5AEA66B3196F3E700076D38F /* Suggest.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AEA66B2196F3E700076D38F /* Suggest.png */; };
 		5AEA66B8196F46470076D38F /* Devashish.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AEA66B7196F46470076D38F /* Devashish.png */; };
 		5AEA66BA196F55D80076D38F /* Play.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AEA66B9196F55D70076D38F /* Play.png */; };
+		828643691975B7D500C3D210 /* cancel-75.png in Resources */ = {isa = PBXBuildFile; fileRef = 828643681975B7D500C3D210 /* cancel-75.png */; };
+		82D7415B1975D61B00B16347 /* sent-75.png in Resources */ = {isa = PBXBuildFile; fileRef = 82D7415A1975D61B00B16347 /* sent-75.png */; };
+		82D7415E1975DA8E00B16347 /* Share.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82D7415D1975DA8E00B16347 /* Share.xib */; };
+		82D741611975DF5500B16347 /* XYZShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D741601975DF5500B16347 /* XYZShareView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +128,11 @@
 		5AEA66B2196F3E700076D38F /* Suggest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Suggest.png; sourceTree = "<group>"; };
 		5AEA66B7196F46470076D38F /* Devashish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Devashish.png; sourceTree = "<group>"; };
 		5AEA66B9196F55D70076D38F /* Play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Play.png; sourceTree = "<group>"; };
+		828643681975B7D500C3D210 /* cancel-75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel-75.png"; sourceTree = "<group>"; };
+		82D7415A1975D61B00B16347 /* sent-75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sent-75.png"; sourceTree = "<group>"; };
+		82D7415D1975DA8E00B16347 /* Share.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Share.xib; sourceTree = "<group>"; };
+		82D7415F1975DF5500B16347 /* XYZShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZShareView.h; sourceTree = "<group>"; };
+		82D741601975DF5500B16347 /* XYZShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZShareView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +262,8 @@
 		5A6095D319729238000EBBEC /* Post */ = {
 			isa = PBXGroup;
 			children = (
+				82D7415A1975D61B00B16347 /* sent-75.png */,
+				828643681975B7D500C3D210 /* cancel-75.png */,
 				5A6095BA19721D74000EBBEC /* Shadow.png */,
 			);
 			name = Post;
@@ -270,6 +281,7 @@
 		5ABFC59619684D4800EE3612 /* XIB and Views */ = {
 			isa = PBXGroup;
 			children = (
+				82D7415C1975DA4A00B16347 /* Share */,
 				5ABFC5A01968548000EE3612 /* PreviewBack */,
 				5ABFC59F1968545F00EE3612 /* PreviewFront */,
 			);
@@ -376,6 +388,16 @@
 			name = Profile;
 			sourceTree = "<group>";
 		};
+		82D7415C1975DA4A00B16347 /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				82D7415D1975DA8E00B16347 /* Share.xib */,
+				82D7415F1975DF5500B16347 /* XYZShareView.h */,
+				82D741601975DF5500B16347 /* XYZShareView.m */,
+			);
+			name = Share;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -453,6 +475,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				828643691975B7D500C3D210 /* cancel-75.png in Resources */,
 				5A6095DE1973E35F000EBBEC /* Edge.png in Resources */,
 				5A6095C319722424000EBBEC /* Post.xib in Resources */,
 				5A476242196704FB00E30E3F /* Images.xcassets in Resources */,
@@ -469,8 +492,10 @@
 				5A6095E11973E35F000EBBEC /* Matrix.png in Resources */,
 				5A6095DD1973E35F000EBBEC /* Frozen.png in Resources */,
 				5A6095EF19744B6F000EBBEC /* AllComments.xib in Resources */,
+				82D7415B1975D61B00B16347 /* sent-75.png in Resources */,
 				5AEA66B3196F3E700076D38F /* Suggest.png in Resources */,
 				5ABFC5A71968C34600EE3612 /* ReadMore.png in Resources */,
+				82D7415E1975DA8E00B16347 /* Share.xib in Resources */,
 				5A47623A196704FB00E30E3F /* Main.storyboard in Resources */,
 				5ABFC5A81968C34600EE3612 /* Share.png in Resources */,
 				5AEA66B8196F46470076D38F /* Devashish.png in Resources */,
@@ -503,6 +528,7 @@
 				5A6095C919727849000EBBEC /* XYZPostView.m in Sources */,
 				5ABFC59519684D3D00EE3612 /* XYZNowWatchingViewController.m in Sources */,
 				5ABFC59B1968537D00EE3612 /* XYZNowWatchingPreviewFront.m in Sources */,
+				82D741611975DF5500B16347 /* XYZShareView.m in Sources */,
 				5A6095EB1973F1BF000EBBEC /* XYZAllPosts.m in Sources */,
 				5A6095CF1972895A000EBBEC /* XYZPost.m in Sources */,
 				5A476233196704FB00E30E3F /* main.m in Sources */,

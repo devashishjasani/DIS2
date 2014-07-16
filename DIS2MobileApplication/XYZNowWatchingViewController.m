@@ -8,6 +8,7 @@
 
 #import "XYZNowWatchingViewController.h"
 #import "XYZAppDelegate.h"
+#import "XYZAllComments.h"
 
 @interface XYZNowWatchingViewController ()
 
@@ -54,6 +55,8 @@
     self.previewFront=[[XYZNowWatchingPreviewFront alloc] initWithShow:self.show];
     [self.previewFront setDelegate:self];
     [self.previewHolder addSubview:self.previewFront];
+ 
+    
     
     
 }
@@ -73,6 +76,16 @@
     XYZShow *currentlyWatching;
     currentlyWatching = [[XYZShow alloc] init];
     return currentlyWatching;
+    
+}
+
+- (IBAction)showAllUpdates:(id)sender {
+    
+    XYZAllComments  * allComments = [[XYZAllComments alloc] init];
+    allComments.frame = CGRectMake(0, 20, allComments.frame.size.width, allComments.frame.size.height);
+    [self.view addSubview:allComments];
+    
+    
     
 }
 

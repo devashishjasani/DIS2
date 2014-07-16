@@ -9,6 +9,7 @@
 #import "XYZNowWatchingPreviewFront.h"
 #import "XYZAppDelegate.h"
 #include "XYZShow.h"
+#import "XYZShareView.h"
 
 @implementation XYZNowWatchingPreviewFront
 
@@ -153,7 +154,16 @@
 
 
 - (IBAction)share:(id)sender {
-    NSLog(@"Sher");
+    NSLog(@"Share");
+    
+    XYZShareView *sharePopup = [[XYZShareView alloc] initWithShow:self.show];
+    sharePopup.frame = CGRectMake(0,20, sharePopup.frame.size.width, sharePopup.frame.size.height);
+    [[self.superview superview] addSubview:sharePopup];
+    
+    
+    
+    
+    
 }
 
 - (IBAction)suggest:(id)sender {

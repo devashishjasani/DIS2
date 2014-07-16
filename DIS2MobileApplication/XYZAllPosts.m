@@ -7,6 +7,8 @@
 //
 
 #import "XYZAllPosts.h"
+#import "XYZPost.h"
+#import "XYZAppDelegate.h"
 
 @implementation XYZAllPosts
 
@@ -14,6 +16,19 @@
 {
     self.posts = [[NSMutableArray alloc] init];
     
+    self.posts = [[NSMutableArray alloc] init];
+    
+    XYZAppDelegate *myDelegate = (XYZAppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    for (int i=0; i<7; i++)
+    {
+        
+        
+        XYZPost *temp = [[XYZPost alloc] initWithShow:(XYZShow *)myDelegate.allShows.shows[i]];
+        [self.posts addObject:temp];
+        
+        
+    }
     
     
     

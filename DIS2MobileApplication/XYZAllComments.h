@@ -15,9 +15,12 @@
 @property (weak, nonatomic) IBOutlet UITableView *commentsTableView;
 @property (weak, nonatomic) IBOutlet UITextView *myComment;
 @property (weak, nonatomic) IBOutlet UIView *commentsPlaceholfer;
-
 @property (weak, nonatomic) IBOutlet UIButton *doneButton;
 
 - (IBAction)doneCommenting:(id)sender;
+@property NSMutableArray *allCommentsForTableView;
+- (IBAction)close:(id)sender;
+
+
 
 @end
